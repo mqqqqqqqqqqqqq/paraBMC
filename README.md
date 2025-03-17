@@ -18,4 +18,10 @@ In `constructF.py` is the initialization of protocol primitives, rules, invarian
 
 `murphi.py` and murphiparser.py are the compilation and conversion interfaces for the syntax.
 
+Often like the mutualEx mini-protocol, bound is typically set to 10.
+
+For the German medium protocol, the bound is typically set to 16.
+
+For Flash large protocols, the bound needs to be set to 18.
+
 The types of protocols detected can be **cache coherence** protocols and **distributed protocols**.
