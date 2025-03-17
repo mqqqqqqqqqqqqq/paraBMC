@@ -1,8 +1,8 @@
 import os
 import sys
 import time
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append("\\home\\lyj238\\Mqian\\smt_dl\\smt4Inductive_Invariants\\protocols\\mutual_nodata_benchmark\\")
+sys.path.append("./")
+sys.path.append("../")
 import murphi
 import constructSMT
 from z3 import *
