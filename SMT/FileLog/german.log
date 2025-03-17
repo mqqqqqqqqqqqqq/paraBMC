@@ -1,0 +1,1189 @@
+CntrlProp_RecvGntE1 {'guard': OpExpr(=, Chan2[1].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvGntE2 {'guard': OpExpr(=, Chan2[2].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvGntS1 {'guard': OpExpr(=, Chan2[1].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvGntS2 {'guard': OpExpr(=, Chan2[2].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntE1 {'guard': OpExpr(&, CurCmd = ReqE, Chan2[1].Cmd = Empty & ExGntd = false & ShrSet[2] = false & ShrSet[1] = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(True)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntE2 {'guard': OpExpr(&, CurCmd = ReqE, Chan2[2].Cmd = Empty & ExGntd = false & ShrSet[2] = false & ShrSet[1] = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(True)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntS1 {'guard': OpExpr(&, CurCmd = ReqS, Chan2[1].Cmd = Empty & ExGntd = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntS2 {'guard': OpExpr(&, CurCmd = ReqS, Chan2[2].Cmd = Empty & ExGntd = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck11 {'guard': OpExpr(&, Chan3[1].Cmd = InvAck, CurCmd != Empty & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(False)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(False)), AssignCmd(VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Data')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck12 {'guard': OpExpr(&, Chan3[2].Cmd = InvAck, CurCmd != Empty & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(False)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(False)), AssignCmd(VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Data')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck21 {'guard': OpExpr(&, Chan3[1].Cmd = InvAck, CurCmd != Empty & ExGntd != true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck22 {'guard': OpExpr(&, Chan3[2].Cmd = InvAck, CurCmd != Empty & ExGntd != true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInvAck1 {'guard': OpExpr(&, Chan2[1].Cmd = Inv, Chan3[1].Cmd = Empty & Cache[1].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInvAck2 {'guard': OpExpr(&, Chan2[2].Cmd = Inv, Chan3[2].Cmd = Empty & Cache[2].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv11 {'guard': OpExpr(&, Chan2[1].Cmd = Empty, InvSet[1] = true & CurCmd = ReqE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv12 {'guard': OpExpr(&, Chan2[2].Cmd = Empty, InvSet[2] = true & CurCmd = ReqE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv21 {'guard': OpExpr(&, Chan2[1].Cmd = Empty, InvSet[1] = true & CurCmd = ReqS & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv22 {'guard': OpExpr(&, Chan2[2].Cmd = Empty, InvSet[2] = true & CurCmd = ReqS & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqE1 {'guard': OpExpr(&, CurCmd = Empty, Chan1[1].Cmd = ReqE), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqE2 {'guard': OpExpr(&, CurCmd = Empty, Chan1[2].Cmd = ReqE), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqS1 {'guard': OpExpr(&, CurCmd = Empty, Chan1[1].Cmd = ReqS), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqS2 {'guard': OpExpr(&, CurCmd = Empty, Chan1[2].Cmd = ReqS), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE11 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE12 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE21 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = S), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE22 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = S), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqS1 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqS2 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store1 {'guard': OpExpr(=, Cache[1].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('1')), AssignCmd(VarExpr('AuxData'), VarExpr('1'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store2 {'guard': OpExpr(=, Cache[2].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('1')), AssignCmd(VarExpr('AuxData'), VarExpr('1'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store3 {'guard': OpExpr(=, Cache[1].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('2')), AssignCmd(VarExpr('AuxData'), VarExpr('2'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store4 {'guard': OpExpr(=, Cache[2].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('2')), AssignCmd(VarExpr('AuxData'), VarExpr('2'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+booleanExpr_list: [VarExpr('ExGntd'), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('InvSet'), VarExpr('2'))]
+scalarsetVars: [FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))]
+CntrlProp_RecvGntE1 {'guard': OpExpr(=, Chan2[1].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvGntE2 {'guard': OpExpr(=, Chan2[2].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvGntS1 {'guard': OpExpr(=, Chan2[1].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvGntS2 {'guard': OpExpr(=, Chan2[2].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntE1 {'guard': OpExpr(&, CurCmd = ReqE, Chan2[1].Cmd = Empty & ExGntd = false & ShrSet[2] = false & ShrSet[1] = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(True)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntE2 {'guard': OpExpr(&, CurCmd = ReqE, Chan2[2].Cmd = Empty & ExGntd = false & ShrSet[2] = false & ShrSet[1] = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(True)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntS1 {'guard': OpExpr(&, CurCmd = ReqS, Chan2[1].Cmd = Empty & ExGntd = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendGntS2 {'guard': OpExpr(&, CurCmd = ReqS, Chan2[2].Cmd = Empty & ExGntd = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck11 {'guard': OpExpr(&, Chan3[1].Cmd = InvAck, CurCmd != Empty & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(False)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(False)), AssignCmd(VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Data')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck12 {'guard': OpExpr(&, Chan3[2].Cmd = InvAck, CurCmd != Empty & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(False)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(False)), AssignCmd(VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Data')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck21 {'guard': OpExpr(&, Chan3[1].Cmd = InvAck, CurCmd != Empty & ExGntd != true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvInvAck22 {'guard': OpExpr(&, Chan3[2].Cmd = InvAck, CurCmd != Empty & ExGntd != true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInvAck1 {'guard': OpExpr(&, Chan2[1].Cmd = Inv, Chan3[1].Cmd = Empty & Cache[1].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInvAck2 {'guard': OpExpr(&, Chan2[2].Cmd = Inv, Chan3[2].Cmd = Empty & Cache[2].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv11 {'guard': OpExpr(&, Chan2[1].Cmd = Empty, InvSet[1] = true & CurCmd = ReqE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv12 {'guard': OpExpr(&, Chan2[2].Cmd = Empty, InvSet[2] = true & CurCmd = ReqE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv21 {'guard': OpExpr(&, Chan2[1].Cmd = Empty, InvSet[1] = true & CurCmd = ReqS & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendInv22 {'guard': OpExpr(&, Chan2[2].Cmd = Empty, InvSet[2] = true & CurCmd = ReqS & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqE1 {'guard': OpExpr(&, CurCmd = Empty, Chan1[1].Cmd = ReqE), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqE2 {'guard': OpExpr(&, CurCmd = Empty, Chan1[2].Cmd = ReqE), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqS1 {'guard': OpExpr(&, CurCmd = Empty, Chan1[1].Cmd = ReqS), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_RecvReqS2 {'guard': OpExpr(&, CurCmd = Empty, Chan1[2].Cmd = ReqS), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE11 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE12 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE21 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = S), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqE22 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = S), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqS1 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_SendReqS2 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store1 {'guard': OpExpr(=, Cache[1].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('1')), AssignCmd(VarExpr('AuxData'), VarExpr('1'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store2 {'guard': OpExpr(=, Cache[2].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('1')), AssignCmd(VarExpr('AuxData'), VarExpr('1'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store3 {'guard': OpExpr(=, Cache[1].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('2')), AssignCmd(VarExpr('AuxData'), VarExpr('2'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+CntrlProp_Store4 {'guard': OpExpr(=, Cache[2].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('2')), AssignCmd(VarExpr('AuxData'), VarExpr('2'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+DataProp_RecvGntE1 {'guard': OpExpr(=, Chan2[1].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvGntE2 {'guard': OpExpr(=, Chan2[2].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvGntS1 {'guard': OpExpr(=, Chan2[1].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvGntS2 {'guard': OpExpr(=, Chan2[2].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendGntE1 {'guard': OpExpr(&, CurCmd = ReqE, Chan2[1].Cmd = Empty & ExGntd = false & ShrSet[2] = false & ShrSet[1] = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(True)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendGntE2 {'guard': OpExpr(&, CurCmd = ReqE, Chan2[2].Cmd = Empty & ExGntd = false & ShrSet[2] = false & ShrSet[1] = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(True)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendGntS1 {'guard': OpExpr(&, CurCmd = ReqS, Chan2[1].Cmd = Empty & ExGntd = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendGntS2 {'guard': OpExpr(&, CurCmd = ReqS, Chan2[2].Cmd = Empty & ExGntd = false), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'GntS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('MemData')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(True)), AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvInvAck11 {'guard': OpExpr(&, Chan3[1].Cmd = InvAck, CurCmd != Empty & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(False)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(False)), AssignCmd(VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Data')))], 'assumption': [VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvInvAck12 {'guard': OpExpr(&, Chan3[2].Cmd = InvAck, CurCmd != Empty & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(False)), AssignCmd(VarExpr('ExGntd'), BooleanExpr(False)), AssignCmd(VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Data')))], 'assumption': [VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvInvAck21 {'guard': OpExpr(&, Chan3[1].Cmd = InvAck, CurCmd != Empty & ExGntd != true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvInvAck22 {'guard': OpExpr(&, Chan3[2].Cmd = InvAck, CurCmd != Empty & ExGntd != true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendInvAck1 {'guard': OpExpr(&, Chan2[1].Cmd = Inv, Chan3[1].Cmd = Empty & Cache[1].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendInvAck2 {'guard': OpExpr(&, Chan2[2].Cmd = Inv, Chan3[2].Cmd = Empty & Cache[2].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendInv11 {'guard': OpExpr(&, Chan2[1].Cmd = Empty, InvSet[1] = true & CurCmd = ReqE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendInv12 {'guard': OpExpr(&, Chan2[2].Cmd = Empty, InvSet[2] = true & CurCmd = ReqE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendInv21 {'guard': OpExpr(&, Chan2[1].Cmd = Empty, InvSet[1] = true & CurCmd = ReqS & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), BooleanExpr(False))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendInv22 {'guard': OpExpr(&, Chan2[2].Cmd = Empty, InvSet[2] = true & CurCmd = ReqS & ExGntd = true), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Inv')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), BooleanExpr(False))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvReqE1 {'guard': OpExpr(&, CurCmd = Empty, Chan1[1].Cmd = ReqE), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvReqE2 {'guard': OpExpr(&, CurCmd = Empty, Chan1[2].Cmd = ReqE), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvReqS1 {'guard': OpExpr(&, CurCmd = Empty, Chan1[1].Cmd = ReqS), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_RecvReqS2 {'guard': OpExpr(&, CurCmd = Empty, Chan1[2].Cmd = ReqS), 'assign': [AssignCmd(VarExpr('CurCmd'), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1'))), AssignCmd(ArrayIndex(VarExpr('InvSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendReqE11 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendReqE12 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendReqE21 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = S), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendReqE22 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = S), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqE'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendReqS1 {'guard': OpExpr(&, Chan1[1].Cmd = Empty, Cache[1].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_SendReqS2 {'guard': OpExpr(&, Chan1[2].Cmd = Empty, Cache[2].State = I), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan1'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'ReqS'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_Store1 {'guard': OpExpr(=, Cache[1].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('1')), AssignCmd(VarExpr('AuxData'), VarExpr('1'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_Store2 {'guard': OpExpr(=, Cache[2].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('1')), AssignCmd(VarExpr('AuxData'), VarExpr('1'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_Store3 {'guard': OpExpr(=, Cache[1].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('2')), AssignCmd(VarExpr('AuxData'), VarExpr('2'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+DataProp_Store4 {'guard': OpExpr(=, Cache[2].State, E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), VarExpr('2')), AssignCmd(VarExpr('AuxData'), VarExpr('2'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+booleanExpr_list: [VarExpr('ExGntd'), ArrayIndex(VarExpr('ShrSet'), VarExpr('2')), ArrayIndex(VarExpr('ShrSet'), VarExpr('1')), ArrayIndex(VarExpr('InvSet'), VarExpr('1')), ArrayIndex(VarExpr('InvSet'), VarExpr('2'))]
+scalarsetVars: [FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('MemData'), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))]
+c.inv_instance: {'CntrlProp': OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), 'DataProp': OpExpr(&, ExGntd = false ->   MemData = AuxData, 1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData))}
+ori_inv: defaultdict(<class 'list'>, {'CntrlProp': [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))], 'DataProp': [OpExpr(&, ExGntd = false ->   MemData = AuxData, 1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData))]})
+CntrlProp_RecvGntE1 {'guard': OpExpr(=, Chan2[1].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+current_inv: CntrlProp
+val: E <class 'str'>
+val: Empty <class 'str'>
+data: Cache[1].Data'
+equalStates: [Cache[1].Data' == 1, Cache[1].Data' == 2]
+data: Chan2[1].Data
+equalStates: [Chan2[1].Data == 1, Chan2[1].Data == 2]
+6. F: [Chan2[1].Cmd == GntE, Cache[1].State' == E, Cache[1].Data' == Chan2[1].Data, Chan2[1].Cmd' == Empty, Cache[2].State == Cache[2].State', Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+        And(Cache[1].State' == S,
+            And(Cache[2].State' != I, Cache[2].State' != S))), And(Implies(Cache[1].State == E, Cache[2].State == I),
+    Implies(Cache[1].State == S,
+            Or(Cache[2].State == I, Cache[2].State == S))), Or(Cache[1].Data' == 1, Cache[1].Data' == 2), Or(Chan2[1].Data == 1, Chan2[1].Data == 2)]
+sat
+解是：
+
+[Cache[1].State = I,
+ Cache[2].State' = E,
+ Chan2[1].Data = 2,
+ Cache[1].State' = E,
+ Chan2[1].Cmd = GntE,
+ Cache[2].State = E,
+ Chan2[1].Cmd' = Empty,
+ Cache[1].Data' = 2]
+invlist1: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+invlist2: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+paraVars: [{'1': 'NODE'}, {'2': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))]
+set(self.enum_notEqulVars): {Cache[2].State'}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Chan2[1].Cmd, Chan2[1].Cmd', Cache[1].State'}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S']}
+1111: [Chan2[1].Cmd == GntE,
+ Cache[1].State' == E,
+ Cache[1].Data' == Chan2[1].Data,
+ Chan2[1].Cmd' == Empty,
+ Cache[2].State == Cache[2].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Or(Cache[1].Data' == 1, Cache[1].Data' == 2),
+ Or(Chan2[1].Data == 1, Chan2[1].Data == 2)]
+checkVars: []
+solution: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE1"
+   !(Cache[1].State = I & Cache[2].State = E & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Cache[2].State, E)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Cache[2].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE1"
+   !(Cache[2].State = E & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE1"
+   !(Chan2[1].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE1']
+sublist: [OpExpr(=, Cache[2].State, E)]
+inv_list [OpExpr(=, Cache[2].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE1"
+   !(Cache[2].State = E);
+counter_ex: ['CntrlProp_RecvGntE1']
+self.aux_inv1: !(Cache[2].State = E & Chan2[1].Cmd = GntE)
+self.aux_inv2: !(Cache[2].State = E & Chan2[1].Cmd = GntE)
+invPattern: []
+invPattern_dict: {}
+matches: {'Cache[2].State', 'Chan2[1].Cmd'}
+var.keys(): 1
+var.keys(): 2
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+add pattern: !(Cache[2].State = E & Chan2[1].Cmd = GntE)
+inv_str:
+ !(Cache[2].State = E & Chan2[1].Cmd = GntE)
+;
+CntrlProp_RecvGntE2 {'guard': OpExpr(=, Chan2[2].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+current_inv: CntrlProp
+val: E <class 'str'>
+val: Empty <class 'str'>
+data: Cache[2].Data'
+equalStates: [Cache[2].Data' == 1, Cache[2].Data' == 2]
+data: Chan2[2].Data
+equalStates: [Chan2[2].Data == 1, Chan2[2].Data == 2]
+6. F: [Chan2[2].Cmd == GntE, Cache[2].State' == E, Cache[2].Data' == Chan2[2].Data, Chan2[2].Cmd' == Empty, Cache[1].State == Cache[1].State', Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+        And(Cache[1].State' == S,
+            And(Cache[2].State' != I, Cache[2].State' != S))), And(Implies(Cache[1].State == E, Cache[2].State == I),
+    Implies(Cache[1].State == S,
+            Or(Cache[2].State == I, Cache[2].State == S))), Implies(Cache[2].State == E, Chan2[1].Cmd != GntE), Or(Cache[2].Data' == 1, Cache[2].Data' == 2), Or(Chan2[2].Data == 1, Chan2[2].Data == 2)]
+sat
+解是：
+
+[Cache[2].State = I,
+ Chan2[2].Data = 1,
+ Chan2[1].Cmd = Empty,
+ Cache[1].State' = E,
+ Chan2[2].Cmd' = Empty,
+ Chan2[2].Cmd = GntE,
+ Cache[2].State' = E,
+ Cache[2].Data' = 1,
+ Cache[1].State = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Chan2[2].Data, 1), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Empty)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Empty)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2)]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+model[cti[str(vars)][0]]: Empty <class 'z3.z3.DatatypeRef'>
+add:
+Chan2[1].Cmd != Empty
+2222: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty]
+解是：
+
+[Chan2[2].Data = 2,
+ Cache[2].Data' = 2,
+ Chan2[2].Cmd' = Empty,
+ Cache[2].State = I,
+ Cache[1].State = E,
+ Cache[2].State' = E,
+ Chan2[1].Cmd = ReqS,
+ Chan2[2].Cmd = GntE,
+ Cache[1].State' = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Chan2[2].Data, 2), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqS)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqS)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+model[cti[str(vars)][0]]: ReqS <class 'z3.z3.DatatypeRef'>
+add:
+Chan2[1].Cmd != ReqS
+2222: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS]
+解是：
+
+[Chan2[2].Data = 2,
+ Cache[2].Data' = 2,
+ Chan2[2].Cmd' = Empty,
+ Cache[2].State = I,
+ Cache[1].State = E,
+ Cache[2].State' = E,
+ Chan2[1].Cmd = ReqE,
+ Chan2[2].Cmd = GntE,
+ Cache[1].State' = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Chan2[2].Data, 2), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqE)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqE)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+model[cti[str(vars)][0]]: ReqE <class 'z3.z3.DatatypeRef'>
+add:
+Chan2[1].Cmd != ReqE
+2222: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE]
+解是：
+
+[Chan2[2].Data = 2,
+ Cache[2].Data' = 2,
+ Chan2[2].Cmd' = Empty,
+ Cache[2].State = I,
+ Cache[1].State = E,
+ Cache[2].State' = E,
+ Chan2[1].Cmd = Inv,
+ Chan2[2].Cmd = GntE,
+ Cache[1].State' = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Chan2[2].Data, 2), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Inv)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Inv)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+model[cti[str(vars)][0]]: Inv <class 'z3.z3.DatatypeRef'>
+add:
+Chan2[1].Cmd != Inv
+2222: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE,
+ Chan2[1].Cmd != Inv]
+解是：
+
+[Chan2[2].Data = 2,
+ Cache[2].Data' = 2,
+ Chan2[2].Cmd' = Empty,
+ Cache[2].State = I,
+ Cache[1].State = E,
+ Cache[2].State' = E,
+ Chan2[1].Cmd = InvAck,
+ Chan2[2].Cmd = GntE,
+ Cache[1].State' = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Chan2[2].Data, 2), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, InvAck)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, InvAck)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE,
+ Chan2[1].Cmd != Inv]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+model[cti[str(vars)][0]]: InvAck <class 'z3.z3.DatatypeRef'>
+add:
+Chan2[1].Cmd != InvAck
+2222: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE,
+ Chan2[1].Cmd != Inv,
+ Chan2[1].Cmd != InvAck]
+解是：
+
+[Chan2[2].Data = 2,
+ Cache[2].Data' = 2,
+ Chan2[2].Cmd' = Empty,
+ Cache[2].State = I,
+ Cache[1].State = E,
+ Cache[2].State' = E,
+ Chan2[1].Cmd = GntS,
+ Chan2[2].Cmd = GntE,
+ Cache[1].State' = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Chan2[2].Data, 2), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntS)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntS)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE,
+ Chan2[1].Cmd != Inv,
+ Chan2[1].Cmd != InvAck]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+model[cti[str(vars)][0]]: GntS <class 'z3.z3.DatatypeRef'>
+add:
+Chan2[1].Cmd != GntS
+2222: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE,
+ Chan2[1].Cmd != Inv,
+ Chan2[1].Cmd != InvAck,
+ Chan2[1].Cmd != GntS]
+解是：
+
+[Chan2[2].Data = 2,
+ Cache[2].Data' = 2,
+ Chan2[2].Cmd' = Empty,
+ Cache[2].State = I,
+ Cache[1].State = E,
+ Cache[2].State' = E,
+ Chan2[1].Cmd = GntE,
+ Chan2[2].Cmd = GntE,
+ Cache[1].State' = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Chan2[2].Data, 2), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntE)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntE)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[2].Cmd == GntE,
+ Cache[2].State' == E,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2),
+ Chan2[1].Cmd != Empty,
+ Chan2[1].Cmd != ReqS,
+ Chan2[1].Cmd != ReqE,
+ Chan2[1].Cmd != Inv,
+ Chan2[1].Cmd != InvAck,
+ Chan2[1].Cmd != GntS]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+solution: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Empty)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Empty)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[1].Cmd = Empty & Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[2].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntE2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+solution: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqS)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqS)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[1].Cmd = ReqS & Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[2].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntE2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+solution: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, ReqE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[1].Cmd = ReqE & Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[2].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntE2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+solution: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Inv)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, Inv)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[1].Cmd = Inv & Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[2].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntE2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+solution: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, InvAck)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, InvAck)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[1].Cmd = InvAck & Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[2].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntE2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+solution: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntS)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntS)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[1].Cmd = GntS & Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[2].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntE2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+solution: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I), OpExpr(=, Chan2[1].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[1].Cmd = GntE & Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntE)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Chan2[2].Cmd = GntE);
+counter_ex: ['CntrlProp_RecvGntE2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntE2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntE2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntE']
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntE)
+CntrlProp_RecvGntS1 {'guard': OpExpr(=, Chan2[1].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+current_inv: CntrlProp
+val: S <class 'str'>
+val: Empty <class 'str'>
+data: Cache[1].Data'
+equalStates: [Cache[1].Data' == 1, Cache[1].Data' == 2]
+data: Chan2[1].Data
+equalStates: [Chan2[1].Data == 1, Chan2[1].Data == 2]
+6. F: [Chan2[1].Cmd == GntS, Cache[1].State' == S, Cache[1].Data' == Chan2[1].Data, Chan2[1].Cmd' == Empty, Cache[2].State == Cache[2].State', Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+        And(Cache[1].State' == S,
+            And(Cache[2].State' != I, Cache[2].State' != S))), And(Implies(Cache[1].State == E, Cache[2].State == I),
+    Implies(Cache[1].State == S,
+            Or(Cache[2].State == I, Cache[2].State == S))), Implies(Cache[2].State == E, Chan2[1].Cmd != GntE), Or(Cache[1].Data' == 1, Cache[1].Data' == 2), Or(Chan2[1].Data == 1, Chan2[1].Data == 2)]
+sat
+解是：
+
+[Cache[1].State = I,
+ Cache[2].State' = E,
+ Chan2[1].Data = 2,
+ Cache[1].State' = S,
+ Chan2[1].Cmd = GntS,
+ Cache[2].State = E,
+ Chan2[1].Cmd' = Empty,
+ Cache[1].Data' = 2]
+invlist1: [OpExpr(=, Chan2[1].Cmd, GntS), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+invlist2: [OpExpr(=, Chan2[1].Cmd, GntS), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+paraVars: [{'1': 'NODE'}, {'2': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Chan2[1].Cmd, Chan2[1].Cmd', Cache[1].State'}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE']}
+1111: [Chan2[1].Cmd == GntS,
+ Cache[1].State' == S,
+ Cache[1].Data' == Chan2[1].Data,
+ Chan2[1].Cmd' == Empty,
+ Cache[2].State == Cache[2].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Or(Cache[1].Data' == 1, Cache[1].Data' == 2),
+ Or(Chan2[1].Data == 1, Chan2[1].Data == 2)]
+checkVars: []
+solution: [OpExpr(=, Chan2[1].Cmd, GntS), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntS), OpExpr(=, Cache[2].State, E), OpExpr(=, Cache[1].State, I)]
+new_inv: invariant "CntrlProp_RecvGntS1"
+   !(Cache[1].State = I & Cache[2].State = E & Chan2[1].Cmd = GntS);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntS), OpExpr(=, Cache[2].State, E)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntS), OpExpr(=, Cache[2].State, E)]
+new_inv: invariant "CntrlProp_RecvGntS1"
+   !(Cache[2].State = E & Chan2[1].Cmd = GntS);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntS)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntS)]
+new_inv: invariant "CntrlProp_RecvGntS1"
+   !(Chan2[1].Cmd = GntS);
+counter_ex: ['CntrlProp_RecvGntS1']
+sublist: [OpExpr(=, Cache[2].State, E)]
+inv_list [OpExpr(=, Cache[2].State, E)]
+new_inv: invariant "CntrlProp_RecvGntS1"
+   !(Cache[2].State = E);
+counter_ex: ['CntrlProp_RecvGntS1']
+self.aux_inv1: !(Cache[2].State = E & Chan2[1].Cmd = GntS)
+self.aux_inv2: !(Cache[2].State = E & Chan2[1].Cmd = GntS)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}}
+matches: {'Cache[2].State', 'Chan2[1].Cmd'}
+var.keys(): 1
+var.keys(): 2
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntS']
+var出现次数： {}
+{}
+add pattern: !(Cache[2].State = E & Chan2[1].Cmd = GntS)
+inv_str:
+ !(Cache[2].State = E & Chan2[1].Cmd = GntS)
+;
+CntrlProp_RecvGntS2 {'guard': OpExpr(=, Chan2[2].Cmd, GntS), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'S')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+current_inv: CntrlProp
+val: S <class 'str'>
+val: Empty <class 'str'>
+data: Cache[2].Data'
+equalStates: [Cache[2].Data' == 1, Cache[2].Data' == 2]
+data: Chan2[2].Data
+equalStates: [Chan2[2].Data == 1, Chan2[2].Data == 2]
+6. F: [Chan2[2].Cmd == GntS, Cache[2].State' == S, Cache[2].Data' == Chan2[2].Data, Chan2[2].Cmd' == Empty, Cache[1].State == Cache[1].State', Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+        And(Cache[1].State' == S,
+            And(Cache[2].State' != I, Cache[2].State' != S))), And(Implies(Cache[1].State == E, Cache[2].State == I),
+    Implies(Cache[1].State == S,
+            Or(Cache[2].State == I, Cache[2].State == S))), Implies(Cache[2].State == E, Chan2[1].Cmd != GntE), Implies(Cache[2].State == E, Chan2[1].Cmd != GntS), Or(Cache[2].Data' == 1, Cache[2].Data' == 2), Or(Chan2[2].Data == 1, Chan2[2].Data == 2)]
+sat
+解是：
+
+[Chan2[2].Data = 1,
+ Chan2[2].Cmd' = Empty,
+ Chan2[2].Cmd = GntS,
+ Cache[2].State = I,
+ Cache[1].State' = E,
+ Cache[2].State' = S,
+ Cache[2].Data' = 1,
+ Cache[1].State = E]
+invlist1: [OpExpr(=, Chan2[2].Cmd, GntS), OpExpr(=, Chan2[2].Data, 1), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+invlist2: [OpExpr(=, Chan2[2].Cmd, GntS), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+paraVars: [{'2': 'NODE'}, {'1': 'NODE'}]
+inv already exist: [OpExpr(->, 1 != 2, (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S)), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntE), NegExpr(Cache[2].State = E & Chan2[1].Cmd = GntS)]
+set(self.enum_notEqulVars): {Cache[2].State', Chan2[1].Cmd}
+set(self.enum_EqulVars): {Cache[2].State, Cache[1].State, Cache[2].State', Cache[1].State', Chan2[2].Cmd', Chan2[2].Cmd}
+self.enum_notEqulVars_map: {"Cache[2].State'": ['I', 'S'], 'Chan2[1].Cmd': ['GntE', 'GntS']}
+1111: [Chan2[2].Cmd == GntS,
+ Cache[2].State' == S,
+ Cache[2].Data' == Chan2[2].Data,
+ Chan2[2].Cmd' == Empty,
+ Cache[1].State == Cache[1].State',
+ Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+         And(Cache[1].State' == S,
+             And(Cache[2].State' != I, Cache[2].State' != S))),
+ And(Implies(Cache[1].State == E, Cache[2].State == I),
+     Implies(Cache[1].State == S,
+             Or(Cache[2].State == I, Cache[2].State == S))),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntE),
+ Implies(Cache[2].State == E, Chan2[1].Cmd != GntS),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Chan2[2].Data == 1, Chan2[2].Data == 2)]
+checkVars: [Chan2[1].Cmd]
+vars: Chan2[1].Cmd
+solution: [OpExpr(=, Chan2[2].Cmd, GntS), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntS), OpExpr(=, Cache[1].State, E), OpExpr(=, Cache[2].State, I)]
+new_inv: invariant "CntrlProp_RecvGntS2"
+   !(Cache[2].State = I & Cache[1].State = E & Chan2[2].Cmd = GntS);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntS), OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntS), OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntS2"
+   !(Cache[1].State = E & Chan2[2].Cmd = GntS);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[2].Cmd, GntS)]
+inv_list [OpExpr(=, Chan2[2].Cmd, GntS)]
+new_inv: invariant "CntrlProp_RecvGntS2"
+   !(Chan2[2].Cmd = GntS);
+counter_ex: ['CntrlProp_RecvGntS2']
+sublist: [OpExpr(=, Cache[1].State, E)]
+inv_list [OpExpr(=, Cache[1].State, E)]
+new_inv: invariant "CntrlProp_RecvGntS2"
+   !(Cache[1].State = E);
+counter_ex: ['CntrlProp_RecvGntS2']
+self.aux_inv1: !(Cache[1].State = E & Chan2[2].Cmd = GntS)
+self.aux_inv2: !(Cache[1].State = E & Chan2[2].Cmd = GntS)
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE'], ['Cache[_].State = E', 'Chan2[_].Cmd = GntS']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}, ('Cache[_].State = E', 'Chan2[_].Cmd = GntS'): {}}
+matches: {'Cache[1].State', 'Chan2[2].Cmd'}
+var.keys(): 2
+var.keys(): 1
+var_list: []
+Oplist: ['Cache[_].State = E', 'Chan2[_].Cmd = GntS']
+var出现次数： {}
+{}
+var出现次数： {}
+{}
+exist self.aux_inv: !(Cache[1].State = E & Chan2[2].Cmd = GntS)
+CntrlProp_SendInvAck1 {'guard': OpExpr(&, Chan2[1].Cmd = Inv, Chan3[1].Cmd = Empty & Cache[1].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+current_inv: CntrlProp
+val: Empty <class 'str'>
+val: InvAck <class 'str'>
+val: I <class 'str'>
+6. F: [And(Chan2[1].Cmd == Inv,
+    And(Chan3[1].Cmd == Empty, Cache[1].State != E)), Chan2[1].Cmd' == Empty, Chan3[1].Cmd' == InvAck, Cache[1].State' == I, Cache[2].State == Cache[2].State', Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+        And(Cache[1].State' == S,
+            And(Cache[2].State' != I, Cache[2].State' != S))), And(Implies(Cache[1].State == E, Cache[2].State == I),
+    Implies(Cache[1].State == S,
+            Or(Cache[2].State == I, Cache[2].State == S))), Implies(Cache[2].State == E, Chan2[1].Cmd != GntE), Implies(Cache[2].State == E, Chan2[1].Cmd != GntS)]
+unsat
+CntrlProp_SendInvAck2 {'guard': OpExpr(&, Chan2[2].Cmd = Inv, Chan3[2].Cmd = Empty & Cache[2].State != E), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty')), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan3'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'InvAck')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'I'))], 'assumption': [FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State'))], '!inv': NegExpr(1 != 2 ->   (Cache[1].State = E ->   Cache[2].State = I) & (Cache[1].State = S ->   Cache[2].State = I | Cache[2].State = S))}
+current_inv: CntrlProp
+val: Empty <class 'str'>
+val: InvAck <class 'str'>
+val: I <class 'str'>
+6. F: [And(Chan2[2].Cmd == Inv,
+    And(Chan3[2].Cmd == Empty, Cache[2].State != E)), Chan2[2].Cmd' == Empty, Chan3[2].Cmd' == InvAck, Cache[2].State' == I, Cache[1].State == Cache[1].State', Implies(Implies(Cache[1].State' == E, Cache[2].State' == I),
+        And(Cache[1].State' == S,
+            And(Cache[2].State' != I, Cache[2].State' != S))), And(Implies(Cache[1].State == E, Cache[2].State == I),
+    Implies(Cache[1].State == S,
+            Or(Cache[2].State == I, Cache[2].State == S))), Implies(Cache[2].State == E, Chan2[1].Cmd != GntE), Implies(Cache[2].State == E, Chan2[1].Cmd != GntS)]
+unsat
+DataProp_RecvGntE1 {'guard': OpExpr(=, Chan2[1].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('1')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+current_inv: DataProp
+val: E <class 'str'>
+val: Empty <class 'str'>
+data: Cache[1].Data'
+equalStates: [Cache[1].Data' == 1, Cache[1].Data' == 2]
+data: Chan2[1].Data
+equalStates: [Chan2[1].Data == 1, Chan2[1].Data == 2]
+data: MemData
+equalStates: [MemData == 1, MemData == 2]
+data: MemData'
+equalStates: [MemData' == 1, MemData' == 2]
+data: AuxData
+equalStates: [AuxData == 1, AuxData == 2]
+data: AuxData'
+equalStates: [AuxData' == 1, AuxData' == 2]
+data: Cache[2].Data
+equalStates: [Cache[2].Data == 1, Cache[2].Data == 2]
+data: Cache[2].Data'
+equalStates: [Cache[2].Data' == 1, Cache[2].Data' == 2]
+data: Cache[1].Data
+equalStates: [Cache[1].Data == 1, Cache[1].Data == 2]
+6. F: [Chan2[1].Cmd == GntE, Cache[1].State' == E, Cache[1].Data' == Chan2[1].Data, Chan2[1].Cmd' == Empty, ExGntd == ExGntd', MemData == MemData', AuxData == AuxData', Cache[2].State == Cache[2].State', Cache[2].Data == Cache[2].Data', Implies(Implies(ExGntd' == False, MemData' == AuxData'),
+        Implies(Implies(Cache[1].State' != I,
+                        Cache[1].Data' == AuxData'),
+                And(Cache[2].State' != I,
+                    Cache[2].Data' != AuxData'))), And(Implies(ExGntd == False, MemData == AuxData),
+    And(Implies(Cache[1].State != I,
+                Cache[1].Data == AuxData),
+        Implies(Cache[2].State != I,
+                Cache[2].Data == AuxData))), Or(Cache[1].Data' == 1, Cache[1].Data' == 2), Or(Chan2[1].Data == 1, Chan2[1].Data == 2), Or(MemData == 1, MemData == 2), Or(MemData' == 1, MemData' == 2), Or(AuxData == 1, AuxData == 2), Or(AuxData' == 1, AuxData' == 2), Or(Cache[2].Data == 1, Cache[2].Data == 2), Or(Cache[2].Data' == 1, Cache[2].Data' == 2), Or(Cache[1].Data == 1, Cache[1].Data == 2)]
+sat
+解是：
+
+[Cache[2].Data' = 1,
+ Cache[2].State' = S,
+ AuxData' = 1,
+ Chan2[1].Data = 2,
+ MemData' = 1,
+ Cache[1].Data = 1,
+ Cache[1].State = I,
+ Cache[1].Data' = 2,
+ MemData = 1,
+ ExGntd' = False,
+ ExGntd = False,
+ Chan2[1].Cmd = GntE,
+ Cache[2].Data = 1,
+ Cache[2].State = S,
+ Cache[1].State' = E,
+ AuxData = 1,
+ Chan2[1].Cmd' = Empty]
+invlist1: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S), OpExpr(=, Cache[2].Data, 1), OpExpr(=, Cache[1].State, I), OpExpr(=, Cache[1].Data, 1)]
+paraVars: [{'1': 'NODE'}, {'2': 'NODE'}]
+inv already exist: [OpExpr(&, ExGntd = false ->   MemData = AuxData, 1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData))]
+set(self.enum_notEqulVars): {Cache[1].State, Cache[2].State', Cache[2].State, Cache[1].State'}
+set(self.enum_EqulVars): {Cache[2].State, Cache[2].Data, Chan2[1].Cmd, MemData, ExGntd, Chan2[1].Cmd', Cache[1].State', AuxData}
+self.enum_notEqulVars_map: {"Cache[1].State'": ['I'], "Cache[2].State'": ['I'], 'Cache[1].State': ['I'], 'Cache[2].State': ['I']}
+1111: [Chan2[1].Cmd == GntE,
+ Cache[1].State' == E,
+ Cache[1].Data' == Chan2[1].Data,
+ Chan2[1].Cmd' == Empty,
+ ExGntd == ExGntd',
+ MemData == MemData',
+ AuxData == AuxData',
+ Cache[2].State == Cache[2].State',
+ Cache[2].Data == Cache[2].Data',
+ Implies(Implies(ExGntd' == False, MemData' == AuxData'),
+         Implies(Implies(Cache[1].State' != I,
+                         Cache[1].Data' == AuxData'),
+                 And(Cache[2].State' != I,
+                     Cache[2].Data' != AuxData'))),
+ And(Implies(ExGntd == False, MemData == AuxData),
+     And(Implies(Cache[1].State != I,
+                 Cache[1].Data == AuxData),
+         Implies(Cache[2].State != I,
+                 Cache[2].Data == AuxData))),
+ Or(Cache[1].Data' == 1, Cache[1].Data' == 2),
+ Or(Chan2[1].Data == 1, Chan2[1].Data == 2),
+ Or(MemData == 1, MemData == 2),
+ Or(MemData' == 1, MemData' == 2),
+ Or(AuxData == 1, AuxData == 2),
+ Or(AuxData' == 1, AuxData' == 2),
+ Or(Cache[2].Data == 1, Cache[2].Data == 2),
+ Or(Cache[2].Data' == 1, Cache[2].Data' == 2),
+ Or(Cache[1].Data == 1, Cache[1].Data == 2)]
+checkVars: [Cache[1].State, Cache[2].State']
+vars: Cache[1].State
+vars: Cache[2].State'
+solution: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S), OpExpr(=, Cache[2].Data, 1), OpExpr(=, Cache[1].State, I), OpExpr(=, Cache[1].Data, 1)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S), OpExpr(=, Cache[2].Data, 1), OpExpr(=, Cache[1].State, I), OpExpr(=, Cache[1].Data, 1)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(Cache[1].Data = 1 & Cache[1].State = I & Cache[2].Data = 1 & Cache[2].State = S & AuxData = 1 & MemData = 1 & ExGntd = false & Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S), OpExpr(=, Cache[2].Data, 1), OpExpr(=, Cache[1].State, I)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S), OpExpr(=, Cache[2].Data, 1), OpExpr(=, Cache[1].State, I)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(Cache[1].State = I & Cache[2].Data = 1 & Cache[2].State = S & AuxData = 1 & MemData = 1 & ExGntd = false & Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S), OpExpr(=, Cache[2].Data, 1)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S), OpExpr(=, Cache[2].Data, 1)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(Cache[2].Data = 1 & Cache[2].State = S & AuxData = 1 & MemData = 1 & ExGntd = false & Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1), OpExpr(=, Cache[2].State, S)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(Cache[2].State = S & AuxData = 1 & MemData = 1 & ExGntd = false & Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1), OpExpr(=, AuxData, 1)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(AuxData = 1 & MemData = 1 & ExGntd = false & Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false), OpExpr(=, MemData, 1)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(MemData = 1 & ExGntd = false & Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2), OpExpr(=, ExGntd, false)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(ExGntd = false & Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE), OpExpr(=, Chan2[1].Data, 2)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+No cti found. The invariants are OK.
+sublist: [OpExpr(=, Chan2[1].Cmd, GntE)]
+inv_list [OpExpr(=, Chan2[1].Cmd, GntE)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(Chan2[1].Cmd = GntE);
+counter_ex: ['DataProp_RecvGntE1']
+sublist: [OpExpr(=, Chan2[1].Data, 2)]
+inv_list [OpExpr(=, Chan2[1].Data, 2)]
+new_inv: invariant "DataProp_RecvGntE1"
+   !(Chan2[1].Data = 2);
+No cti found. The invariants are OK.
+self.aux_inv1: !(Chan2[1].Data = 2)
+self.aux_inv2: !Chan2[1].Data
+invPattern: [['Cache[_].State = E', 'Chan2[_].Cmd = GntE'], ['Cache[_].State = E', 'Chan2[_].Cmd = GntS']]
+invPattern_dict: {('Cache[_].State = E', 'Chan2[_].Cmd = GntE'): {}, ('Cache[_].State = E', 'Chan2[_].Cmd = GntS'): {}}
+matches: set()
+var.keys(): 1
+var.keys(): 2
+var_list: []
+Oplist: []
+var出现次数： {}
+{}
+var出现次数： {}
+{}
+add pattern: !Chan2[1].Data
+inv_str:
+ !Chan2[1].Data
+;
+DataProp_RecvGntE2 {'guard': OpExpr(=, Chan2[2].Cmd, GntE), 'assign': [AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'State')), EnumValExpr(EnumType('I', 'S', 'E'), 'E')), AssignCmd(FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('2')), Token('CNAME', 'Data')), FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Data'))), AssignCmd(FieldName(ArrayIndex(VarExpr('Chan2'), VarExpr('2')), Token('CNAME', 'Cmd')), EnumValExpr(EnumType('Empty', 'ReqS', 'ReqE', 'Inv', 'InvAck', 'GntS', 'GntE'), 'Empty'))], 'assumption': [VarExpr('ExGntd'), VarExpr('MemData'), VarExpr('AuxData'), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'State')), FieldName(ArrayIndex(VarExpr('Cache'), VarExpr('1')), Token('CNAME', 'Data'))], '!inv': NegExpr((ExGntd = false ->   MemData = AuxData) & (1 != 2 ->   (Cache[1].State != I ->   Cache[1].Data = AuxData) & (Cache[2].State != I ->   Cache[2].Data = AuxData)))}
+current_inv: DataProp
+val: E <class 'str'>
+val: Empty <class 'str'>
+Traceback (most recent call last):
+  File "/home/xjq/桌面/smt4Inductive_Invariants/SMT/newSMT.py", line 863, in <module>
+    new_inv_list, inv_name = constructF.smtFormula()
+  File "/home/xjq/桌面/smt4Inductive_Invariants/SMT/newSMT.py", line 372, in smtFormula
+    self.variables, self.boundStates = self.getVars(ori_inv, self.variables, self.boundStates)
+  File "/home/xjq/桌面/smt4Inductive_Invariants/SMT/newSMT.py", line 286, in getVars
+    if fomula.expr.op == '->':
+AttributeError: 'FieldName' object has no attribute 'op'

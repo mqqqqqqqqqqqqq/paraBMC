@@ -1,0 +1,6 @@
+{'Init': OpExpr(&, CurCmd = Empty, ExGntd = false & ShrSet[2] = false & ShrSet[1] = false & InvSet[2] = false & InvSet[1] = false & Cache[2].State = I & Cache[1].State = I & Chan3[2].Cmd = Empty & Chan3[1].Cmd = Empty & Chan2[2].Cmd = Empty & Chan2[1].Cmd = Empty & Chan1[2].Cmd = Empty & Chan1[1].Cmd = Empty)}
+inv_str:
+   forall j : NODE do
+        {'german_withoutData': NegExpr(Cache[j].State = E & InvSet[j] = false & Chan2[j].Cmd = Empty)}
+end  ;
+Times of calling BMC spends 1.148022 s

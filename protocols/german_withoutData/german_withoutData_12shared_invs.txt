@@ -1,0 +1,31 @@
+True  solution3:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & ExGntd = false & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqE);
+True  solution4:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & ExGntd = false & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE);
+True  solution5:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE);
+True  solution7:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqE);
+True  solution9:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & ExGntd = false & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS);
+True  solution10:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & ExGntd = false & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty);
+True  solution11:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & ExGntd = false & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS);
+True  solution12:  !(ShrSet[1] = true & Chan3[1].Cmd = Empty & ExGntd = false & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS);
+
+
+
+False  solution1:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = I & Chan1[1].Cmd = ReqE);
+False  solution2:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE);
+False  solution6:  !(ShrSet[1] = false & Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqE);
+False  solution8:  !(ShrSet[1] = false & Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE);
+False  solution13:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqS);
+False  solution14:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = ReqS);
+False  solution15:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = I & Chan1[1].Cmd = ReqS);
+False  solution16:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = ReqE);
+False  solution17:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = Empty);
+False  solution18:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqE);
+False  solution19:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS);
+False  solution20:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS);
+False  solution21:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS);
+False  solution22:  !(Chan3[1].Cmd = Empty & ExGntd = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty);
+False  solution23:  !(Chan3[1].Cmd = InvAck & Chan2[1].Cmd = Inv & CurCmd = Empty & Cache[1].State = E & Chan1[1].Cmd = Empty);
+False  solution24:  !(Chan3[1].Cmd = Empty & ExGntd = false & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = Empty & Cache[1].State = E & Chan1[1].Cmd = Empty);
+
+
+
+

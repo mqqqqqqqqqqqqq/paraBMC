@@ -1,0 +1,18 @@
+start
+!(ShrSet[1] = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E)
+!(ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I)
+!(ShrSet[1] = true & InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S)
+end
+
+
+
+
+
+
+!(Chan3[1].Cmd = Empty & ExGntd = true & Chan2[1].Cmd = Empty & Cache[1].State = I);
+!(Chan3[1].Cmd = InvAck & Cache[1].State = E);
+!(ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I);
+!(InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E);
+!(InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S);
+!(ExGntd = true & Cache[1].State = S);
+!(InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E);

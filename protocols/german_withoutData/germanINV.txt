@@ -1,0 +1,202 @@
+invariant "inv__51(((ShrSet[2] = true) & (ExGntd = true)) & (ShrSet[1] = true))"
+  (((ShrSet[2] = true) & (ExGntd = true)) & (ShrSet[1] = true));
+invariant "inv__51(((ShrSet[1] = true) & (ExGntd = true)) & (ShrSet[2] = true))"
+  (((ShrSet[1] = true) & (ExGntd = true)) & (ShrSet[2] = true));
+invariant "inv__50(((InvSet[1] = true) & (ExGntd = true)) & (InvSet[2] = true))"
+  (((InvSet[1] = true) & (ExGntd = true)) & (InvSet[2] = true));
+invariant "inv__50(((InvSet[2] = true) & (ExGntd = true)) & (InvSet[1] = true))"
+  (((InvSet[2] = true) & (ExGntd = true)) & (InvSet[1] = true));
+invariant "inv__49(((CurCmd = ReqS) & (InvSet[2] = true)) & (Chan2[1].Cmd = Inv))"
+  (((CurCmd = ReqS) & (InvSet[2] = true)) & (Chan2[1].Cmd = Inv));
+invariant "inv__49(((CurCmd = ReqS) & (InvSet[1] = true)) & (Chan2[2].Cmd = Inv))"
+  (((CurCmd = ReqS) & (InvSet[1] = true)) & (Chan2[2].Cmd = Inv));
+invariant "inv__48(((Chan2[1].Cmd = Inv) & (CurCmd = ReqS)) & (Chan2[2].Cmd = Inv))"
+  (((Chan2[1].Cmd = Inv) & (CurCmd = ReqS)) & (Chan2[2].Cmd = Inv));
+invariant "inv__48(((Chan2[2].Cmd = Inv) & (CurCmd = ReqS)) & (Chan2[1].Cmd = Inv))"
+  (((Chan2[2].Cmd = Inv) & (CurCmd = ReqS)) & (Chan2[1].Cmd = Inv));
+invariant "inv__47(((CurCmd = ReqS) & (Chan3[2].Cmd = InvAck)) & (InvSet[1] = true))"
+  (((CurCmd = ReqS) & (Chan3[2].Cmd = InvAck)) & (InvSet[1] = true));
+invariant "inv__47(((CurCmd = ReqS) & (Chan3[1].Cmd = InvAck)) & (InvSet[2] = true))"
+  (((CurCmd = ReqS) & (Chan3[1].Cmd = InvAck)) & (InvSet[2] = true));
+invariant "inv__46(((Chan3[2].Cmd = InvAck) & (CurCmd = ReqS)) & (Chan3[1].Cmd = InvAck))"
+  (((Chan3[2].Cmd = InvAck) & (CurCmd = ReqS)) & (Chan3[1].Cmd = InvAck));
+invariant "inv__46(((Chan3[1].Cmd = InvAck) & (CurCmd = ReqS)) & (Chan3[2].Cmd = InvAck))"
+  (((Chan3[1].Cmd = InvAck) & (CurCmd = ReqS)) & (Chan3[2].Cmd = InvAck));
+invariant "inv__45(((Chan2[2].Cmd = Inv) & (CurCmd = ReqS)) & (Chan3[1].Cmd = InvAck))"
+  (((Chan2[2].Cmd = Inv) & (CurCmd = ReqS)) & (Chan3[1].Cmd = InvAck));
+invariant "inv__45(((Chan2[1].Cmd = Inv) & (CurCmd = ReqS)) & (Chan3[2].Cmd = InvAck))"
+  (((Chan2[1].Cmd = Inv) & (CurCmd = ReqS)) & (Chan3[2].Cmd = InvAck));
+invariant "inv__44(((Chan3[1].Cmd = InvAck) & (CurCmd = ReqS)) & (ExGntd = false))"
+  (((Chan3[1].Cmd = InvAck) & (CurCmd = ReqS)) & (ExGntd = false));
+invariant "inv__44(((Chan3[2].Cmd = InvAck) & (CurCmd = ReqS)) & (ExGntd = false))"
+  (((Chan3[2].Cmd = InvAck) & (CurCmd = ReqS)) & (ExGntd = false));
+invariant "inv__43((Chan3[1].Cmd = InvAck) & (CurCmd = Empty))"
+  ((Chan3[1].Cmd = InvAck) & (CurCmd = Empty));
+invariant "inv__43((Chan3[2].Cmd = InvAck) & (CurCmd = Empty))"
+  ((Chan3[2].Cmd = InvAck) & (CurCmd = Empty));
+invariant "inv__42(((Chan2[1].Cmd = Inv) & (CurCmd = ReqS)) & (ExGntd = false))"
+  (((Chan2[1].Cmd = Inv) & (CurCmd = ReqS)) & (ExGntd = false));
+invariant "inv__42(((Chan2[2].Cmd = Inv) & (CurCmd = ReqS)) & (ExGntd = false))"
+  (((Chan2[2].Cmd = Inv) & (CurCmd = ReqS)) & (ExGntd = false));
+invariant "inv__41((Chan2[1].Cmd = GntE) & (ShrSet[2] = true))"
+  ((Chan2[1].Cmd = GntE) & (ShrSet[2] = true));
+invariant "inv__41((Chan2[2].Cmd = GntE) & (ShrSet[1] = true))"
+  ((Chan2[2].Cmd = GntE) & (ShrSet[1] = true));
+invariant "inv__40((Chan2[1].Cmd = GntS) & (Chan3[1].Cmd = InvAck))"
+  ((Chan2[1].Cmd = GntS) & (Chan3[1].Cmd = InvAck));
+invariant "inv__40((Chan2[2].Cmd = GntS) & (Chan3[2].Cmd = InvAck))"
+  ((Chan2[2].Cmd = GntS) & (Chan3[2].Cmd = InvAck));
+invariant "inv__39((InvSet[1] = true) & (Chan3[1].Cmd = InvAck))"
+  ((InvSet[1] = true) & (Chan3[1].Cmd = InvAck));
+invariant "inv__39((InvSet[2] = true) & (Chan3[2].Cmd = InvAck))"
+  ((InvSet[2] = true) & (Chan3[2].Cmd = InvAck));
+invariant "inv__38((CurCmd = Empty) & (Chan2[1].Cmd = Inv))"
+  ((CurCmd = Empty) & (Chan2[1].Cmd = Inv));
+invariant "inv__38((CurCmd = Empty) & (Chan2[2].Cmd = Inv))"
+  ((CurCmd = Empty) & (Chan2[2].Cmd = Inv));
+invariant "inv__37((Cache[1].State = E) & (ShrSet[2] = true))"
+  ((Cache[1].State = E) & (ShrSet[2] = true));
+invariant "inv__37((Cache[2].State = E) & (ShrSet[1] = true))"
+  ((Cache[2].State = E) & (ShrSet[1] = true));
+invariant "inv__36((Chan2[2].Cmd = GntE) & (InvSet[1] = true))"
+  ((Chan2[2].Cmd = GntE) & (InvSet[1] = true));
+invariant "inv__36((Chan2[1].Cmd = GntE) & (InvSet[2] = true))"
+  ((Chan2[1].Cmd = GntE) & (InvSet[2] = true));
+invariant "inv__35((ShrSet[1] = false) & (Chan2[1].Cmd = GntE))"
+  ((ShrSet[1] = false) & (Chan2[1].Cmd = GntE));
+invariant "inv__35((ShrSet[2] = false) & (Chan2[2].Cmd = GntE))"
+  ((ShrSet[2] = false) & (Chan2[2].Cmd = GntE));
+invariant "inv__34((!(Cache[1].State = I)) & (Chan3[1].Cmd = InvAck))"
+  ((!(Cache[1].State = I)) & (Chan3[1].Cmd = InvAck));
+invariant "inv__34((!(Cache[2].State = I)) & (Chan3[2].Cmd = InvAck))"
+  ((!(Cache[2].State = I)) & (Chan3[2].Cmd = InvAck));
+invariant "inv__33((Chan2[1].Cmd = GntS) & (ShrSet[1] = false))"
+  ((Chan2[1].Cmd = GntS) & (ShrSet[1] = false));
+invariant "inv__33((Chan2[2].Cmd = GntS) & (ShrSet[2] = false))"
+  ((Chan2[2].Cmd = GntS) & (ShrSet[2] = false));
+invariant "inv__32((Chan2[1].Cmd = Inv) & (Chan3[1].Cmd = InvAck))"
+  ((Chan2[1].Cmd = Inv) & (Chan3[1].Cmd = InvAck));
+invariant "inv__32((Chan2[2].Cmd = Inv) & (Chan3[2].Cmd = InvAck))"
+  ((Chan2[2].Cmd = Inv) & (Chan3[2].Cmd = InvAck));
+invariant "inv__31((ExGntd = true) & (Chan2[1].Cmd = GntS))"
+  ((ExGntd = true) & (Chan2[1].Cmd = GntS));
+invariant "inv__31((ExGntd = true) & (Chan2[2].Cmd = GntS))"
+  ((ExGntd = true) & (Chan2[2].Cmd = GntS));
+invariant "inv__30((InvSet[1] = true) & (ShrSet[1] = false))"
+  ((InvSet[1] = true) & (ShrSet[1] = false));
+invariant "inv__30((InvSet[2] = true) & (ShrSet[2] = false))"
+  ((InvSet[2] = true) & (ShrSet[2] = false));
+invariant "inv__29((InvSet[1] = true) & (Chan2[1].Cmd = Inv))"
+  ((InvSet[1] = true) & (Chan2[1].Cmd = Inv));
+invariant "inv__29((InvSet[2] = true) & (Chan2[2].Cmd = Inv))"
+  ((InvSet[2] = true) & (Chan2[2].Cmd = Inv));
+invariant "inv__28(((((ExGntd = true) & (!(Cache[1].State = E))) & (Chan2[1].Cmd = Empty)) & (ShrSet[1] = true)) & (CurCmd = Empty))"
+  (((((ExGntd = true) & (!(Cache[1].State = E))) & (Chan2[1].Cmd = Empty)) & (ShrSet[1] = true)) & (CurCmd = Empty));
+invariant "inv__28(((((ExGntd = true) & (!(Cache[2].State = E))) & (Chan2[2].Cmd = Empty)) & (ShrSet[2] = true)) & (CurCmd = Empty))"
+  (((((ExGntd = true) & (!(Cache[2].State = E))) & (Chan2[2].Cmd = Empty)) & (ShrSet[2] = true)) & (CurCmd = Empty));
+invariant "inv__27((Cache[2].State = E) & (InvSet[1] = true))"
+  ((Cache[2].State = E) & (InvSet[1] = true));
+invariant "inv__27((Cache[1].State = E) & (InvSet[2] = true))"
+  ((Cache[1].State = E) & (InvSet[2] = true));
+invariant "inv__26((Chan2[1].Cmd = GntE) & (Chan2[2].Cmd = Inv))"
+  ((Chan2[1].Cmd = GntE) & (Chan2[2].Cmd = Inv));
+invariant "inv__26((Chan2[2].Cmd = GntE) & (Chan2[1].Cmd = Inv))"
+  ((Chan2[2].Cmd = GntE) & (Chan2[1].Cmd = Inv));
+invariant "inv__25((Chan2[1].Cmd = GntE) & (Chan2[2].Cmd = GntE))"
+  ((Chan2[1].Cmd = GntE) & (Chan2[2].Cmd = GntE));
+invariant "inv__25((Chan2[2].Cmd = GntE) & (Chan2[1].Cmd = GntE))"
+  ((Chan2[2].Cmd = GntE) & (Chan2[1].Cmd = GntE));
+invariant "inv__24((!(Cache[1].State = I)) & (ShrSet[1] = false))"
+  ((!(Cache[1].State = I)) & (ShrSet[1] = false));
+invariant "inv__24((!(Cache[2].State = I)) & (ShrSet[2] = false))"
+  ((!(Cache[2].State = I)) & (ShrSet[2] = false));
+invariant "inv__23((Chan2[2].Cmd = GntS) & (Chan2[1].Cmd = GntE))"
+  ((Chan2[2].Cmd = GntS) & (Chan2[1].Cmd = GntE));
+invariant "inv__23((Chan2[1].Cmd = GntS) & (Chan2[2].Cmd = GntE))"
+  ((Chan2[1].Cmd = GntS) & (Chan2[2].Cmd = GntE));
+invariant "inv__22((Chan2[1].Cmd = Inv) & (ShrSet[1] = false))"
+  ((Chan2[1].Cmd = Inv) & (ShrSet[1] = false));
+invariant "inv__22((Chan2[2].Cmd = Inv) & (ShrSet[2] = false))"
+  ((Chan2[2].Cmd = Inv) & (ShrSet[2] = false));
+invariant "inv__21((((ExGntd = true) & (!(Cache[1].State = E))) & (Chan2[1].Cmd = Empty)) & (InvSet[1] = true))"
+  ((((ExGntd = true) & (!(Cache[1].State = E))) & (Chan2[1].Cmd = Empty)) & (InvSet[1] = true));
+invariant "inv__21((((ExGntd = true) & (!(Cache[2].State = E))) & (Chan2[2].Cmd = Empty)) & (InvSet[2] = true))"
+  ((((ExGntd = true) & (!(Cache[2].State = E))) & (Chan2[2].Cmd = Empty)) & (InvSet[2] = true));
+invariant "inv__20((Cache[1].State = E) & (Chan2[2].Cmd = Inv))"
+  ((Cache[1].State = E) & (Chan2[2].Cmd = Inv));
+invariant "inv__20((Cache[2].State = E) & (Chan2[1].Cmd = Inv))"
+  ((Cache[2].State = E) & (Chan2[1].Cmd = Inv));
+invariant "inv__19((Chan2[2].Cmd = GntE) & (Chan3[1].Cmd = InvAck))"
+  ((Chan2[2].Cmd = GntE) & (Chan3[1].Cmd = InvAck));
+invariant "inv__19((Chan2[1].Cmd = GntE) & (Chan3[2].Cmd = InvAck))"
+  ((Chan2[1].Cmd = GntE) & (Chan3[2].Cmd = InvAck));
+invariant "inv__18((Chan2[1].Cmd = GntE) & (Chan3[1].Cmd = InvAck))"
+  ((Chan2[1].Cmd = GntE) & (Chan3[1].Cmd = InvAck));
+invariant "inv__18((Chan2[2].Cmd = GntE) & (Chan3[2].Cmd = InvAck))"
+  ((Chan2[2].Cmd = GntE) & (Chan3[2].Cmd = InvAck));
+invariant "inv__17((Chan2[1].Cmd = GntE) & (Cache[1].State = E))"
+  ((Chan2[1].Cmd = GntE) & (Cache[1].State = E));
+invariant "inv__17((Chan2[2].Cmd = GntE) & (Cache[2].State = E))"
+  ((Chan2[2].Cmd = GntE) & (Cache[2].State = E));
+invariant "inv__16((Chan2[1].Cmd = GntS) & (Cache[1].State = E))"
+  ((Chan2[1].Cmd = GntS) & (Cache[1].State = E));
+invariant "inv__16((Chan2[2].Cmd = GntS) & (Cache[2].State = E))"
+  ((Chan2[2].Cmd = GntS) & (Cache[2].State = E));
+invariant "inv__15((Cache[2].State = E) & (Chan2[1].Cmd = GntE))"
+  ((Cache[2].State = E) & (Chan2[1].Cmd = GntE));
+invariant "inv__15((Cache[1].State = E) & (Chan2[2].Cmd = GntE))"
+  ((Cache[1].State = E) & (Chan2[2].Cmd = GntE));
+invariant "inv__14((!(Cache[1].State = I)) & (Chan2[2].Cmd = GntE))"
+  ((!(Cache[1].State = I)) & (Chan2[2].Cmd = GntE));
+invariant "inv__14((!(Cache[2].State = I)) & (Chan2[1].Cmd = GntE))"
+  ((!(Cache[2].State = I)) & (Chan2[1].Cmd = GntE));
+invariant "inv__13((Cache[2].State = E) & (Chan2[1].Cmd = GntS))"
+  ((Cache[2].State = E) & (Chan2[1].Cmd = GntS));
+invariant "inv__13((Cache[1].State = E) & (Chan2[2].Cmd = GntS))"
+  ((Cache[1].State = E) & (Chan2[2].Cmd = GntS));
+invariant "inv__12((Chan3[1].Cmd = InvAck) & (ShrSet[1] = false))"
+  ((Chan3[1].Cmd = InvAck) & (ShrSet[1] = false));
+invariant "inv__12((Chan3[2].Cmd = InvAck) & (ShrSet[2] = false))"
+  ((Chan3[2].Cmd = InvAck) & (ShrSet[2] = false));
+invariant "inv__11(((ExGntd = true) & (!(Cache[1].State = E))) & (Chan2[1].Cmd = Inv))"
+  (((ExGntd = true) & (!(Cache[1].State = E))) & (Chan2[1].Cmd = Inv));
+invariant "inv__11(((ExGntd = true) & (!(Cache[2].State = E))) & (Chan2[2].Cmd = Inv))"
+  (((ExGntd = true) & (!(Cache[2].State = E))) & (Chan2[2].Cmd = Inv));
+invariant "inv__10((ExGntd = false) & (Chan2[1].Cmd = GntE))"
+  ((ExGntd = false) & (Chan2[1].Cmd = GntE));
+invariant "inv__10((ExGntd = false) & (Chan2[2].Cmd = GntE))"
+  ((ExGntd = false) & (Chan2[2].Cmd = GntE));
+invariant "inv__9((Cache[2].State = E) & (Chan3[1].Cmd = InvAck))"
+  ((Cache[2].State = E) & (Chan3[1].Cmd = InvAck));
+invariant "inv__9((Cache[1].State = E) & (Chan3[2].Cmd = InvAck))"
+  ((Cache[1].State = E) & (Chan3[2].Cmd = InvAck));
+invariant "inv__8((Cache[1].State = E) & (Chan3[1].Cmd = InvAck))"
+  ((Cache[1].State = E) & (Chan3[1].Cmd = InvAck));
+invariant "inv__8((Cache[2].State = E) & (Chan3[2].Cmd = InvAck))"
+  ((Cache[2].State = E) & (Chan3[2].Cmd = InvAck));
+invariant "inv__7((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = GntE))"
+  ((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = GntE));
+invariant "inv__7((!(Chan2[2].Data = AuxData)) & (Chan2[2].Cmd = GntE))"
+  ((!(Chan2[2].Data = AuxData)) & (Chan2[2].Cmd = GntE));
+invariant "inv__6((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = GntS))"
+  ((!(Chan2[1].Data = AuxData)) & (Chan2[1].Cmd = GntS));
+invariant "inv__6((!(Chan2[2].Data = AuxData)) & (Chan2[2].Cmd = GntS))"
+  ((!(Chan2[2].Data = AuxData)) & (Chan2[2].Cmd = GntS));
+invariant "inv__5((!(Cache[2].State = I)) & (Cache[1].State = E))"
+  ((!(Cache[2].State = I)) & (Cache[1].State = E));
+invariant "inv__5((!(Cache[1].State = I)) & (Cache[2].State = E))"
+  ((!(Cache[1].State = I)) & (Cache[2].State = E));
+invariant "inv__4(((!(Chan3[1].Data = AuxData)) & (ExGntd = true)) & (Chan3[1].Cmd = InvAck))"
+  (((!(Chan3[1].Data = AuxData)) & (ExGntd = true)) & (Chan3[1].Cmd = InvAck));
+invariant "inv__4(((!(Chan3[2].Data = AuxData)) & (ExGntd = true)) & (Chan3[2].Cmd = InvAck))"
+  (((!(Chan3[2].Data = AuxData)) & (ExGntd = true)) & (Chan3[2].Cmd = InvAck));
+invariant "inv__3((ExGntd = false) & (Cache[1].State = E))"
+  ((ExGntd = false) & (Cache[1].State = E));
+invariant "inv__3((ExGntd = false) & (Cache[2].State = E))"
+  ((ExGntd = false) & (Cache[2].State = E));
+invariant "inv__2((!(Cache[1].State = I)) & (!(Cache[1].Data = AuxData)))"
+  ((!(Cache[1].State = I)) & (!(Cache[1].Data = AuxData)));
+invariant "inv__2((!(Cache[2].State = I)) & (!(Cache[2].Data = AuxData)))"
+  ((!(Cache[2].State = I)) & (!(Cache[2].Data = AuxData)));
+invariant "inv__1"
+  ((ExGntd = false) & (!(MemData = AuxData)));

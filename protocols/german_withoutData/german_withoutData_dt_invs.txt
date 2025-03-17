@@ -1,0 +1,119 @@
+The solution1 in dt is: true
+  Chan3[1].Cmd = InvAck & Chan3[2].Cmd = Empty & InvSet[1] = true & Chan2[1].Cmd = Empty & InvSet[2] = true & Chan2[2].Cmd = Empty & CurCmd = Empty & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = E & Chan1[2].Cmd = Empty
+The solution2 in dt is: true
+  ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution3 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution4 in dt is: true
+  ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution5 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = false & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution6 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = S & Chan1[2].Cmd = ReqS
+The solution7 in dt is: true
+  ShrSet[2] = false & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+
+
+solution1:   !(Chan3[1].Cmd = InvAck & Chan3[2].Cmd = Empty & InvSet[1] = true & Chan2[1].Cmd = Empty & InvSet[2] = true & Chan2[2].Cmd = Empty & CurCmd = Empty & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = E & Chan1[2].Cmd = Empty)
+solution2:   !(ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS)
+solution3:   !(Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS)
+solution4:   !(Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS)
+solution5:   !(Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS)
+solution6:   !(ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS)
+solution7:   !(ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS)
+solution8:   !(ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS)
+
+
+The solution1 in dt is: true
+  Chan3[1].Cmd = InvAck & Chan3[2].Cmd = Empty & InvSet[1] = true & Chan2[1].Cmd = Empty & InvSet[2] = true & Chan2[2].Cmd = Empty & CurCmd = Empty & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = E & Chan1[2].Cmd = Empty
+The solution2 in dt is: true
+  ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution3 in dt is: true
+  ShrSet[1] = true & ShrSet[2] = false & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution4 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution5 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution6 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution7 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution8 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution9 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution10 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution11 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = false & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution12 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution13 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution14 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution15 in dt is: true
+  ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution16 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution17 in dt is: true
+  ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution18 in dt is: true
+  ShrSet[1] = true & ShrSet[2] = false & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution19 in dt is: true
+  ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution20 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution21 in dt is: true
+  ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution22 in dt is: true
+  ShrSet[1] = true & ShrSet[2] = false & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution23 in dt is: true
+  ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution24 in dt is: true
+  ShrSet[1] = true & ShrSet[2] = false & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqS
+The solution25 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution26 in dt is: true
+  ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution27 in dt is: true
+  ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution28 in dt is: true
+  ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution29 in dt is: true
+  ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution30 in dt is: true
+  ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution31 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = I & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution32 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution33 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution34 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution35 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution36 in dt is: true
+  ShrSet[1] = false & ShrSet[2] = true & Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = false & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution37 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution38 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution39 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution40 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution41 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution42 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution43 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = Empty & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution44 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqE & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution45 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = S & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+The solution46 in dt is: true
+  Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & InvSet[1] = false & Chan2[1].Cmd = Empty & ExGntd = true & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E & Chan1[1].Cmd = ReqS & Cache[2].State = I & Chan1[2].Cmd = ReqE
+

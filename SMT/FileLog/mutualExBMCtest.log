@@ -1,0 +1,17 @@
+{'Init': OpExpr(&, x = true, n[2] = I & n[1] = I)}
+bmc_sat:  False
+not found cex in bound  0
+bmc_sat:  False
+not found cex in bound  1
+[n[1]@1 = I,
+ n[1]@2 = I,
+ n[2]@0 = I,
+ n[1]@0 = I,
+ x@2 = False,
+ n[2]@2 = C,
+ x@1 = True,
+ n[2]@1 = T,
+ x@0 = True]
+bmc_sat:  True
+found cex in bound  2
+Times of calling BMC spends 0.307761 s

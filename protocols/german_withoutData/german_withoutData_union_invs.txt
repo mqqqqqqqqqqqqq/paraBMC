@@ -1,0 +1,187 @@
+union1_solution1_&_solution1:
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I)
+union2_solution1_&_solution6:
+  !(ExGntd = true & Cache[2].State = S)
+union3_solution2_&_solution2:
+  !(Chan3[2].Cmd = InvAck & Cache[2].State = E)
+union4_solution2_&_solution3:
+  !(ShrSet[2] = true & Cache[1].State = E)
+union5_solution3_&_solution3:
+  !(ShrSet[2] = true & Chan3[2].Cmd = Empty & Chan2[2].Cmd = Empty & Cache[2].State = I)
+union6_solution4_&_solution4:
+  !(Cache[2].State = E & Cache[1].State = E)
+union7_solution4_&_solution5:
+  !(Cache[2].State = S & Cache[1].State = E)
+union8_solution5_&_solution5:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = S)
+union9_solution6_&_solution6:
+  !(ExGntd = true & Cache[2].State = S)
+union10_solution7_&_solution7:
+  !(Cache[2].State = E & Cache[1].State = E)
+counts: 10
+Delete duplicate inv: 
+  !(Cache[2].State = E & Cache[1].State = E)
+  !(ShrSet[2] = true & Cache[1].State = E)
+  !(ShrSet[2] = true & Chan3[2].Cmd = Empty & Chan2[2].Cmd = Empty & Cache[2].State = I)
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I)
+  !(Chan3[2].Cmd = InvAck & Cache[2].State = E)
+  !(Cache[2].State = S & Cache[1].State = E)
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = S)
+  !(ExGntd = true & Cache[2].State = S)
+counts: 8
+
+union
+!(Cache[1].State = E & Cache[2].State = E)
+!(Chan3[1].Cmd = Empty & Chan3[2].Cmd = Empty & Chan2[1].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[1].State = I & Cache[2].State = I)
+!(ShrSet[2] = true & Chan3[2].Cmd = Empty & Chan2[2].Cmd = Empty & Cache[2].State = I)
+!(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = S)
+!(ExGntd = true & Cache[2].State = S)
+
+not union
+!(Chan3[2].Cmd = InvAck & Cache[2].State = E)
+!(Cache[2].State = S & Cache[1].State = E)
+!(ShrSet[2] = true & Cache[1].State = E)
+
+!(InvSet[1] = false & Chan2[1].Cmd = Empty & CurCmd = ReqE & Cache[1].State = E)
+!(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E)
+
+
+
+
+
+
+
+
+
+union1_solution1_&_solution1:
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I)
+union2_solution1_&_solution13:
+  !(Cache[2].State = S & ExGntd = true)
+union3_solution1_&_solution14:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E)
+union4_solution1_&_solution15:
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I)
+union5_solution1_&_solution16:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E)
+union6_solution1_&_solution17:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E)
+union7_solution1_&_solution18:
+  !(Cache[2].State = S & ExGntd = true)
+union8_solution2_&_solution2:
+  !(Cache[2].State = E & Cache[1].State = E)
+union9_solution2_&_solution6:
+  !(InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & CurCmd = ReqE)
+union10_solution2_&_solution8:
+  !(Cache[2].State = S & ExGntd = true)
+union11_solution2_&_solution19:
+  !(Cache[2].State = S & ExGntd = true)
+union12_solution2_&_solution20:
+  !(Cache[2].State = E & Cache[1].State = E)
+union13_solution2_&_solution21:
+  !(InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & CurCmd = ReqE)
+union14_solution2_&_solution22:
+  !(Cache[2].State = E & Cache[1].State = E)
+union15_solution6_&_solution6:
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & ExGntd = true & ShrSet[2] = false)
+union16_solution6_&_solution8:
+  !(Cache[2].State = S & ExGntd = true)
+union17_solution6_&_solution19:
+  !(Cache[2].State = S & ExGntd = true)
+union18_solution6_&_solution20:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = E)
+union19_solution6_&_solution21:
+  !(Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I & ShrSet[1] = false)
+union20_solution6_&_solution22:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = E)
+union21_solution8_&_solution8:
+  !(Cache[2].State = S & ExGntd = true)
+union22_solution8_&_solution19:
+  !(Cache[2].State = S & ExGntd = true)
+union23_solution8_&_solution20:
+  !(Cache[2].State = E & Cache[1].State = S)
+union24_solution8_&_solution21:
+  !(Cache[1].State = S & ExGntd = true)
+union25_solution8_&_solution22:
+  !(Cache[2].State = E & Cache[1].State = S)
+union26_solution13_&_solution13:
+  !(Cache[2].State = S & ExGntd = true)
+union27_solution13_&_solution14:
+  !(Cache[2].State = E & Cache[1].State = S)
+union28_solution13_&_solution15:
+  !(Cache[1].State = S & ExGntd = true)
+union29_solution13_&_solution16:
+  !(Cache[2].State = E & Cache[1].State = S)
+union30_solution13_&_solution17:
+  !(Cache[2].State = E & Cache[1].State = S)
+union31_solution13_&_solution18:
+  !(Cache[2].State = S & ExGntd = true)
+union32_solution14_&_solution14:
+  !(Cache[2].State = E & Cache[1].State = E)
+union33_solution14_&_solution15:
+  !(InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & CurCmd = ReqS)
+union34_solution14_&_solution16:
+  !(Cache[2].State = E & Cache[1].State = E)
+union35_solution14_&_solution17:
+  !(Cache[2].State = E & Cache[1].State = E)
+union36_solution14_&_solution18:
+  !(Cache[2].State = S & ExGntd = true)
+union37_solution15_&_solution15:
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I)
+union38_solution15_&_solution16:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E)
+union39_solution15_&_solution17:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E)
+union40_solution15_&_solution18:
+  !(Cache[2].State = S & ExGntd = true)
+union41_solution16_&_solution16:
+  !(Cache[2].State = E & Cache[1].State = E)
+union42_solution16_&_solution17:
+  !(Cache[2].State = E & Cache[1].State = E)
+union43_solution16_&_solution18:
+  !(Cache[2].State = S & ExGntd = true)
+union44_solution17_&_solution17:
+  !(Cache[2].State = E & Cache[1].State = E)
+union45_solution17_&_solution18:
+  !(Cache[2].State = S & ExGntd = true)
+union46_solution18_&_solution18:
+  !(Cache[2].State = S & ExGntd = true)
+union47_solution19_&_solution19:
+  !(Cache[2].State = S & ExGntd = true)
+union48_solution19_&_solution20:
+  !(Cache[2].State = E & Cache[1].State = S)
+union49_solution19_&_solution21:
+  !(Cache[1].State = S & ExGntd = true)
+union50_solution19_&_solution22:
+  !(Cache[2].State = E & Cache[1].State = S)
+union51_solution20_&_solution20:
+  !(Cache[2].State = E & Cache[1].State = E)
+union52_solution20_&_solution21:
+  !(InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & CurCmd = ReqE)
+union53_solution20_&_solution22:
+  !(Cache[2].State = E & Cache[1].State = E)
+union54_solution21_&_solution21:
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I)
+union55_solution21_&_solution22:
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = E)
+union56_solution22_&_solution22:
+  !(Cache[2].State = E & Cache[1].State = E)
+union57_solution23_&_solution23:
+  !(Chan2[2].Cmd = Inv & CurCmd = Empty)
+union58_solution24_&_solution24:
+  !(ExGntd = false & Cache[2].State = E)
+counts: 58
+Delete duplicate inv: 
+  !(Cache[2].State = E & Cache[1].State = S)
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = E)
+  !(Chan2[2].Cmd = Inv & CurCmd = Empty)
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & ExGntd = true & ShrSet[2] = false)
+  !(ExGntd = false & Cache[2].State = E)
+  !(Cache[2].State = E & Cache[1].State = E)
+  !(InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & CurCmd = ReqS)
+  !(InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E)
+  !(Cache[2].State = S & ExGntd = true)
+  !(Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I & ShrSet[1] = false)  跟第4条对称
+  !(InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & CurCmd = ReqE)
+  !(Cache[1].State = S & ExGntd = true)
+  !(Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I)
+counts: 13

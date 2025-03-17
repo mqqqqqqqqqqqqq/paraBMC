@@ -1,0 +1,340 @@
+The Inv in flash_1 is:  !(Sta.Proc[2].CacheState = CACHE_E & Sta.Proc[1].CacheState = CACHE_E)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+Consistency of results is : YES
+
+
+The Inv in flash_2 is:  !(Sta.HomeProc.CacheState = CACHE_E & Sta.Proc[1].CacheState = CACHE_E)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_3 is:  !(Sta.MemData = Sta.CurrData)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_4 is:  !(Sta.Proc[1].CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_5 is:  !(Sta.HomeProc.CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  2
+The Inv in flash_6 is:  !(Sta.UniMsg[1].Cmd = UNI_PutX & Sta.Proc[1].ProcCmd = NODE_GetX)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+The Inv in flash_7 is:  !(Sta.UniMsg[1].Cmd = UNI_PutX & Sta.Proc[2].CacheState = CACHE_E)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_8 is:  !(Sta.HomeProc.ProcCmd = NODE_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_9 is:  !(Sta.HomeProc.CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_10 is:  !(Sta.Dir.Pending = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_11 is:  !(Sta.Dir.Dirty = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  2
+The Inv in flash_12 is:  !(Sta.Dir.HeadVld = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_13 is:  !(Sta.Dir.ShrSet[1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_14 is:  !(Sta.Dir.HeadPtr = 1)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_15 is:  !(Sta.Dir.HomeHeadPtr = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_16 is:  !(Sta.Dir.ShrSet[2] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_17 is:  !(Sta.Dir.ShrSet[1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_18 is:  !(Sta.Dir.ShrSet[2] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  3
+The Inv in flash_19 is:  !(Sta.Proc[1].CacheState = CACHE_E)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_20 is:  !(Sta.Proc[2].CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_21 is:  !(Sta.UniMsg[2].Cmd = UNI_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_22 is:  !(Sta.UniMsg[1].Cmd = UNI_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_23 is:  !(Sta.UniMsg[1].HomeProc = true & Sta.Proc[2].CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_24 is:  !(Sta.Dir.Pending = false & Sta.UniMsg[2].Cmd = UNI_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_25 is:  !(Sta.Proc[2].CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  3
+The Inv in flash_26 is:  !(Sta.Dir.Dirty = true & Sta.Proc[2].CacheState = CACHE_E)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_27 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.HomeProc.CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_28 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Dir.Pending = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_29 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Dir.Dirty = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  2
+The Inv in flash_30 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Dir.HeadVld = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_31 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Dir.ShrSet[1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_32 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Dir.HeadPtr = 1)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_33 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Dir.HomeHeadPtr = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_34 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Dir.ShrSet[2] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  1
+The Inv in flash_35 is:  !(Sta.Dir.Dirty = true & Sta.HomeUniMsg.Cmd = UNI_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  1
+The Inv in flash_36 is:  !(Sta.UniMsg[1].Cmd = UNI_GetX & Sta.HomeProc.CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  3
+The Inv in flash_37 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Proc[1].CacheState = CACHE_E)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_38 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.Proc[2].CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_39 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.UniMsg[2].Cmd = UNI_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  4
+The Inv in flash_40 is:  !(Sta.UniMsg[1].Proc = 2 & Sta.UniMsg[1].HomeProc = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  4
+The Inv in flash_41 is:  !(Sta.UniMsg[1].HomeProc = false & Sta.HomeUniMsg.Cmd = UNI_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_42 is:  !(Sta.HomeProc.ProcCmd = NODE_None & Sta.UniMsg[1].Cmd = UNI_None)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+The Inv in flash_43 is:  !(Sta.UniMsg[2].Cmd = UNI_PutX & Sta.UniMsg[1].Cmd = UNI_PutX)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_44 is:  !(Sta.HomeProc.CacheState = CACHE_I)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_45 is:  !(Sta.HomeProc.CacheState = CACHE_I & Sta.Dir.Pending = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_46 is:  !(Sta.HomeProc.CacheState = CACHE_I & Sta.Dir.Dirty = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  2
+The Inv in flash_47 is:  !(Sta.HomeProc.CacheState = CACHE_I & Sta.Dir.HeadVld = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_48 is:  !(Sta.HomeProc.CacheState = CACHE_I & Sta.Dir.ShrSet[1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+found cex in bound  0
+The Inv in flash_49 is:  !(Sta.HomeProc.CacheState = CACHE_I & Sta.Dir.HeadPtr = 1)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+Consistency of results is : YES
+
+
+shell runtime: 6837.955063 s

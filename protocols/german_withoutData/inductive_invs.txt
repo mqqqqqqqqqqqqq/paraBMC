@@ -1,0 +1,182 @@
+conjecture  I ~= J -> (cacheVar_state(I) = e -> cacheVar_state(J) = i) & (cacheVar_state(I) = s -> cacheVar_state(J)  = i | cacheVar_state(J)  = s)
+
+
+
+conjecture (exGntd = false -> memData = auxData) &  (cacheVar_state(I) ~= i -> cacheVar_data(I) = auxData)
+
+
+conjecture  I ~= J -> ~((shrSet(I) = true & exGntd = true) & shrSet(J) = true)
+
+
+
+conjecture  I ~= J -> ~((invSet(I) = true & exGntd = true) & invSet(J) = true)
+
+
+
+conjecture  I ~= J -> ~((curCmd = reqs & invSet(I) = true) & chan2Var_cmd(J) = inv)
+
+
+
+conjecture  I ~= J -> ~((chan2Var_cmd(I) = inv & curCmd = reqs) & chan2Var_cmd(J) = inv)
+
+
+
+conjecture  I ~= J -> ~((curCmd = reqs & chan3Var_cmd(I) = invack) & invSet(J) = true)
+
+
+
+conjecture  I ~= J -> ~((chan3Var_cmd(I) = invack & curCmd = reqs) & chan3Var_cmd(J) = invack)
+
+
+
+conjecture  I ~= J -> ~((chan2Var_cmd(I) = inv & curCmd = reqs) & chan3Var_cmd(J) = invack)
+
+
+
+conjecture ~((chan3Var_cmd(I) = invack & curCmd = reqs) & exGntd = false)
+
+
+conjecture ~(chan3Var_cmd(I) = invack & curCmd = empty)
+
+
+conjecture ~((chan2Var_cmd(I) = inv & curCmd = reqs) & exGntd = false)
+
+
+conjecture I ~= J -> ~(chan2Var_cmd(I) = gnte & shrSet(J) = true)
+
+
+
+conjecture ~(chan2Var_cmd(I) = gnts & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(invSet(I) = true & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(curCmd = empty & chan2Var_cmd(I) = inv)
+
+
+conjecture I ~= J -> ~((cacheVar_state(I) = e & shrSet(J) = true))
+
+
+
+conjecture I ~= J -> ~(chan2Var_cmd(I) = gnte & invSet(J) = true)
+
+
+
+conjecture ~(shrSet(I) = false & chan2Var_cmd(I) = gnte)
+
+
+conjecture ~(~(cacheVar_state(I) = i) & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(chan2Var_cmd(I) = gnts & shrSet(I) = false)
+
+
+conjecture ~(chan2Var_cmd(I) = inv & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(exGntd = true & chan2Var_cmd(I) = gnts)
+
+
+conjecture ~(invSet(I) = true & shrSet(I) = false)
+
+
+conjecture ~(invSet(I) = true & chan2Var_cmd(I) = inv)
+
+
+conjecture ~((((exGntd = true & ~(cacheVar_state(I) = e)) & chan2Var_cmd(I) = empty) & shrSet(I) = true) & curCmd = empty)
+
+
+conjecture  I ~= J -> ~(cacheVar_state(J)  = e & invSet(I) = true)
+
+
+
+conjecture  I ~= J -> ~(chan2Var_cmd(I) = gnte & chan2Var_cmd(J) = inv)
+
+
+
+conjecture  I ~= J -> ~(chan2Var_cmd(I) = gnte & chan2Var_cmd(J) = gnte)
+
+
+
+conjecture ~(~(cacheVar_state(I) = i) & shrSet(I) = false)
+
+
+conjecture ~(I ~= J -> chan2Var_cmd(J) = gnts & chan2Var_cmd(I) = gnte)
+
+
+
+conjecture ~(chan2Var_cmd(I) = inv & shrSet(I) = false)
+
+
+conjecture ~(((exGntd = true & ~(cacheVar_state(I) = e)) & chan2Var_cmd(I) = empty) & invSet(I) = true)
+
+
+conjecture ~(I ~= J -> cacheVar_state(J)  = e & chan2Var_cmd(I) = inv)
+
+
+
+conjecture ~(I ~= J -> chan2Var_cmd(J) = gnte & chan3Var_cmd(I) = invack)
+
+
+
+conjecture ~(chan2Var_cmd(I) = gnte & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(chan2Var_cmd(I) = gnte & cacheVar_state(I) = e)
+
+
+conjecture ~(chan2Var_cmd(I) = gnts & cacheVar_state(I) = e)
+
+
+conjecture ~(I ~= J -> cacheVar_state(J)  = e & chan2Var_cmd(I) = gnte)
+
+
+
+conjecture ~(I ~= J -> ~(cacheVar_state(I) = i) & chan2Var_cmd(J) = gnte)
+
+
+
+conjecture ~(I ~= J -> cacheVar_state(J)  = e & chan2Var_cmd(I) = gnts)
+
+
+
+conjecture ~(chan3Var_cmd(I) = invack & shrSet(I) = false)
+
+
+conjecture ~((exGntd = true & ~(cacheVar_state(I) = e)) & chan2Var_cmd(I) = inv)
+
+
+conjecture ~(exGntd = false & chan2Var_cmd(I) = gnte)
+
+
+conjecture ~(I ~= J -> cacheVar_state(J)  = e & chan3Var_cmd(I) = invack)
+
+
+
+conjecture ~(cacheVar_state(I) = e & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(~(chan2Var_data(I) = auxData) & chan2Var_cmd(I) = gnte)
+
+
+conjecture ~(~(chan2Var_data(I) = auxData) & chan2Var_cmd(I) = gnts)
+
+
+conjecture ~(I ~= J -> ~(cacheVar_state(J)  = i) & cacheVar_state(I) = e)
+
+
+
+conjecture ~((~(chan3Var_data(I) = auxData) & exGntd = true) & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(exGntd = false & cacheVar_state(I) = e)
+
+
+conjecture ~(exGntd = false & cacheVar_state(I) = e)
+
+
+conjecture ~(~(cacheVar_state(I) = i) & ~(cacheVar_data(I) = auxData))
+
+
+conjecture ~(ExGntd = false & ~(memData = auxData))

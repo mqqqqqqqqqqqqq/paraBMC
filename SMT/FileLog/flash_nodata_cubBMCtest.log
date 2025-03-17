@@ -1,0 +1,103 @@
+g_tmp:  {'flash': NegExpr(Sta.NakcMsg.Cmd = NAKC_None & Sta.HomeProc.ProcCmd = NODE_None)}
+{'Init': OpExpr(&, Sta.UniMsg[2].Proc = 2 & Sta.UniMsg[1].Proc = 2 | Sta.UniMsg[2].Proc = 1 & Sta.UniMsg[1].Proc = 1, Sta.HomeRpMsg.Cmd = RP_None & Sta.HomeInvMsg.Cmd = INV_None & Sta.HomeUniMsg.HomeProc = true & Sta.HomeUniMsg.Proc = 2 & Sta.HomeUniMsg.Proc = 1 & Sta.HomeUniMsg.Cmd = UNI_None & Sta.Dir.HomeInvSet = false & Sta.Dir.HomeShrSet = false & Sta.HomeProc.CacheState = CACHE_I & Sta.HomeProc.InvMarked = false & Sta.HomeProc.ProcCmd = NODE_None & Sta.RpMsg[2].Cmd = RP_None & Sta.RpMsg[1].Cmd = RP_None & Sta.InvMsg[2].Cmd = INV_None & Sta.InvMsg[1].Cmd = INV_None & Sta.UniMsg[2].HomeProc = true & Sta.UniMsg[1].HomeProc = true & Sta.UniMsg[2].Cmd = UNI_None & Sta.UniMsg[1].Cmd = UNI_None & Sta.Dir.InvSet[2] = false & Sta.Dir.InvSet[1] = false & Sta.Dir.ShrSet[2] = false & Sta.Dir.ShrSet[1] = false & Sta.Proc[2].CacheState = CACHE_I & Sta.Proc[1].CacheState = CACHE_I & Sta.Proc[2].InvMarked = false & Sta.Proc[1].InvMarked = false & Sta.Proc[2].ProcCmd = NODE_None & Sta.Proc[1].ProcCmd = NODE_None & Sta.NakcMsg.Cmd = NAKC_None & Sta.ShWbMsg.HomeProc = true & Sta.ShWbMsg.Proc = 2 & Sta.ShWbMsg.Proc = 1 & Sta.ShWbMsg.Cmd = SHWB_None & Sta.WbMsg.HomeProc = true & Sta.WbMsg.Proc = 2 & Sta.WbMsg.Proc = 1 & Sta.WbMsg.Cmd = WB_None & Sta.Dir.ShrVld = false & Sta.Dir.HomeHeadPtr = true & Sta.Dir.HeadPtr = 2 & Sta.Dir.HeadPtr = 1 & Sta.Dir.HeadVld = false & Sta.Dir.Dirty = false & Sta.Dir.Local = false & Sta.Dir.Pending = false)}
+bmc_sat:  False
+not found cex in bound  0
+bmc_sat:  False
+not found cex in bound  1
+bmc_sat:  False
+not found cex in bound  2
+bmc_sat:  False
+not found cex in bound  3
+bmc_sat:  False
+not found cex in bound  4
+bmc_sat:  False
+not found cex in bound  5
+bmc_sat:  False
+not found cex in bound  6
+bmc_sat:  False
+not found cex in bound  7
+bmc_sat:  False
+not found cex in bound  8
+bmc_sat:  False
+not found cex in bound  9
+bmc_sat:  False
+not found cex in bound  10
+bmc_sat:  False
+not found cex in bound  11
+bmc_sat:  False
+not found cex in bound  12
+bmc_sat:  False
+not found cex in bound  13
+bmc_sat:  False
+not found cex in bound  14
+bmc_sat:  False
+not found cex in bound  15
+bmc_sat:  False
+not found cex in bound  16
+bmc_sat:  False
+not found cex in bound  17
+bmc_sat:  False
+not found cex in bound  18
+bmc_sat:  False
+not found cex in bound  19
+bmc_sat:  False
+not found cex in bound  20
+bmc_sat:  False
+not found cex in bound  21
+bmc_sat:  False
+not found cex in bound  22
+bmc_sat:  False
+not found cex in bound  23
+bmc_sat:  False
+not found cex in bound  24
+bmc_sat:  False
+not found cex in bound  25
+bmc_sat:  False
+not found cex in bound  26
+bmc_sat:  False
+not found cex in bound  27
+bmc_sat:  False
+not found cex in bound  28
+bmc_sat:  False
+not found cex in bound  29
+bmc_sat:  False
+not found cex in bound  30
+bmc_sat:  False
+not found cex in bound  31
+bmc_sat:  False
+not found cex in bound  32
+bmc_sat:  False
+not found cex in bound  33
+bmc_sat:  False
+not found cex in bound  34
+bmc_sat:  False
+not found cex in bound  35
+bmc_sat:  False
+not found cex in bound  36
+bmc_sat:  False
+not found cex in bound  37
+bmc_sat:  False
+not found cex in bound  38
+bmc_sat:  False
+not found cex in bound  39
+bmc_sat:  False
+not found cex in bound  40
+bmc_sat:  False
+not found cex in bound  41
+bmc_sat:  False
+not found cex in bound  42
+bmc_sat:  False
+not found cex in bound  43
+bmc_sat:  False
+not found cex in bound  44
+bmc_sat:  False
+not found cex in bound  45
+bmc_sat:  False
+not found cex in bound  46
+bmc_sat:  False
+not found cex in bound  47
+bmc_sat:  False
+not found cex in bound  48
+bmc_sat:  False
+not found cex in bound  49
+Times of calling BMC spend 99.952314 s

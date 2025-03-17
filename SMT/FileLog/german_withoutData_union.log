@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "smv_union.py", line 474, in <module>
+    result_formula = check_gene_inv(protocol_name, parse_name)
+  File "smv_union.py", line 408, in check_gene_inv
+    formula_dict = gene_formulas(protocol_name, split_formula)
+  File "smv_union.py", line 238, in gene_formulas
+    smv_result = client.check_invariants(protocol_name, smv_formula)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/client.py", line 257, in check_invariants
+    is_true = is_inv(invariant)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/client.py", line 242, in is_inv
+    r = Smv.check_inv(protocol_name, inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/client.py", line 165, in check_inv
+    status, res = request(RequestType.CHECK_INV, f"{name},{inv}", Smv.host, Smv.port)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/client.py", line 121, in request
+    response = make_request(wrapped, host, port)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/client.py", line 104, in make_request
+    response = sock.recv(1024).decode()
+KeyboardInterrupt

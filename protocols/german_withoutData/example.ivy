@@ -1,0 +1,426 @@
+#lang ivy1.7
+
+type data
+type node
+
+type other = {other_em}
+
+type abs_node = struct {
+  x: node,
+  y: other
+}
+
+type cache_state = {i, s, e}
+
+type msg_cmd = {empty, reqs, reqe, inv, invack, gnts, gnte}
+
+
+individual cacheVar_state(J:node) : cache_state
+individual cacheVar_data(J:node) : data
+
+individual chan1Var_cmd(W:node) : msg_cmd
+individual chan1Var_data(W:node) : data
+
+individual chan2Var_cmd(M:node) : msg_cmd
+individual chan2Var_data(W:node) : data
+
+individual chan3Var_cmd(F:node) : msg_cmd
+individual chan3Var_data(W:node) : data
+
+individual invSet(P:node) : bool
+
+individual shrSet(D:node) : bool
+
+individual exGntd : bool
+
+individual curCmd : msg_cmd
+
+individual curPtr : abs_node
+
+individual memData : data
+
+individual auxData : data
+
+
+after init{
+	chan1Var_cmd(Y) := empty;
+	chan2Var_cmd(Y) := empty;
+	chan3Var_cmd(Y) := empty;
+	cacheVar_state(Y) := i;
+	invSet(Y) := false;
+    shrSet(Y) := false;
+    exGntd := false;
+    curCmd := empty;
+    memData := auxData;
+}
+
+action recvgnte = {
+    local i_lv : node
+     {
+        assume chan2Var_cmd(i_lv) = gnte;
+        cacheVar_state(i_lv) := e;
+        cacheVar_data(i_lv) := chan2Var_data(i_lv);
+        chan2Var_cmd(i_lv) := empty;
+    }
+}
+
+action recvgnts = {
+    local i_lv : node
+     {
+        assume chan2Var_cmd(i_lv) = gnts;
+        cacheVar_state(i_lv) := s;
+        cacheVar_data(i_lv) := chan2Var_data(i_lv);
+        chan2Var_cmd(i_lv) := empty;
+    }
+}
+
+action sendgnte = {
+    local i_lv : node
+     {
+        assume curCmd = reqe & x(curPtr) = i_lv & chan2Var_cmd(i_lv) = empty & exGntd = false &  shrSet(J) = false
+    ;
+        chan2Var_cmd(i_lv) := gnte;
+        chan2Var_data(i_lv) := memData;
+        shrSet(i_lv) := true;
+        exGntd := true;
+        curCmd := empty;
+    }
+}
+
+action sendgnts = {
+    local i_lv : node
+     {
+        assume curCmd = reqs & x(curPtr) = i_lv & chan2Var_cmd(i_lv) = empty & exGntd = false;
+        chan2Var_cmd(i_lv) := gnts;
+        chan2Var_data(i_lv) := memData;
+        shrSet(i_lv) := true;
+        curCmd := empty;
+    }
+}
+
+action recvinvack1 = {
+    local i_lv : node
+     {
+        assume chan3Var_cmd(i_lv) = invack & curCmd ~= empty & exGntd = true;
+        chan3Var_cmd(i_lv) := empty;
+        shrSet(i_lv) := false;
+        exGntd := false;
+        memData := chan3Var_data(i_lv);
+    }
+}
+
+action recvinvack2 = {
+    local i_lv : node
+     {
+        assume chan3Var_cmd(i_lv) = invack & curCmd ~= empty & exGntd ~= true;
+        chan3Var_cmd(i_lv) := empty;
+        shrSet(i_lv) := false;
+    }
+}
+
+action sendinvack = {
+    local i_lv : node
+     {
+        assume chan2Var_cmd(i_lv) = inv & chan3Var_cmd(i_lv) = empty & cacheVar_state(i_lv) = e;
+        chan2Var_cmd(i_lv) := empty;
+        chan3Var_cmd(i_lv) := invack;
+        chan3Var_data(i_lv) := cacheVar_data(i_lv);
+        cacheVar_state(i_lv) := i;
+    }
+}
+
+action sendinvack1 = {
+    local i_lv : node
+     {
+        assume chan2Var_cmd(i_lv) = inv & chan3Var_cmd(i_lv) = empty & cacheVar_state(i_lv) ~= e;
+        chan2Var_cmd(i_lv) := empty;
+        chan3Var_cmd(i_lv) := invack;
+        cacheVar_state(i_lv) := i;
+    }
+}
+
+action sendinv1 = {
+    local i_lv : node
+     {
+        assume chan2Var_cmd(i_lv) = empty & invSet(i_lv) = true & curCmd = reqe;
+        chan2Var_cmd(i_lv) := inv;
+        invSet(i_lv) := false;
+    }
+}
+
+action sendinv2 = {
+    local i_lv : node
+     {
+        assume chan2Var_cmd(i_lv) = empty & invSet(i_lv) = true & curCmd = reqs & exGntd = true;
+        chan2Var_cmd(i_lv) := inv;
+        invSet(i_lv) := false;
+    }
+}
+
+action recvreqe = {
+    local i_lv : node
+     {
+        assume curCmd = empty & chan1Var_cmd(i_lv) = reqe;
+        curCmd := reqe;
+        x(curPtr) := i_lv;
+        chan1Var_cmd(i_lv) := empty;
+        local j : node
+        {
+        	invSet(j) := shrSet(j);
+        }
+
+    }
+}
+
+action recvreqs = {
+    local i_lv : node
+     {
+        assume curCmd = empty & chan1Var_cmd(i_lv) = reqs;
+        curCmd := reqs;
+        x(curPtr) := i_lv;
+        chan1Var_cmd(i_lv) := empty;
+        local j : node
+        {
+        	invSet(j) := shrSet(j);
+        }
+
+    }
+}
+
+action sendreqe1 = {
+    local i_lv : node
+     {
+        assume chan1Var_cmd(i_lv) = empty & cacheVar_state(i_lv) = i;
+        chan1Var_cmd(i_lv) := reqe;
+    }
+}
+
+action sendreqe2 = {
+    local i_lv : node
+     {
+        assume chan1Var_cmd(i_lv) = empty & cacheVar_state(i_lv) = s;
+        chan1Var_cmd(i_lv) := reqe;
+    }
+}
+
+action sendreqs = {
+    local i_lv : node
+     {
+        assume chan1Var_cmd(i_lv) = empty & cacheVar_state(i_lv) = i;
+        chan1Var_cmd(i_lv) := reqs;
+    }
+}
+
+action store = {
+    local i_lv : node, d : data
+     {
+        assume cacheVar_state(i_lv) = e;
+        cacheVar_data(i_lv) := d;
+        auxData := cacheVar_data(i_lv);
+    }
+}
+
+# conjecture  I ~= J -> (cacheVar_state(I) = e -> cacheVar_state(J) = i) & (cacheVar_state(I) = s -> cacheVar_state(J)  = i | cacheVar_state(J)  = s)
+
+
+
+# conjecture (exGntd = false -> memData = auxData) &  (cacheVar_state(I) ~= i -> cacheVar_data(I) = auxData)
+
+
+conjecture  I ~= J -> ~((shrSet(I) = true & exGntd = true) & shrSet(J) = true)
+
+
+
+conjecture  I ~= J -> ~((invSet(I) = true & exGntd = true) & invSet(J) = true)
+
+
+
+conjecture  I ~= J -> ~((curCmd = reqs & invSet(I) = true) & chan2Var_cmd(J) = inv)
+
+
+
+conjecture  I ~= J -> ~((chan2Var_cmd(I) = inv & curCmd = reqs) & chan2Var_cmd(J) = inv)
+
+
+
+conjecture  I ~= J -> ~((curCmd = reqs & chan3Var_cmd(I) = invack) & invSet(J) = true)
+
+
+
+conjecture  I ~= J -> ~((chan3Var_cmd(I) = invack & curCmd = reqs) & chan3Var_cmd(J) = invack)
+
+
+
+conjecture  I ~= J -> ~((chan2Var_cmd(I) = inv & curCmd = reqs) & chan3Var_cmd(J) = invack)
+
+
+
+conjecture ~((chan3Var_cmd(I) = invack & curCmd = reqs) & exGntd = false)
+
+
+conjecture ~(chan3Var_cmd(I) = invack & curCmd = empty)
+
+
+conjecture ~((chan2Var_cmd(I) = inv & curCmd = reqs) & exGntd = false)
+
+
+conjecture I ~= J -> ~(chan2Var_cmd(I) = gnte & shrSet(J) = true)
+
+
+
+conjecture ~(chan2Var_cmd(I) = gnts & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(invSet(I) = true & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(curCmd = empty & chan2Var_cmd(I) = inv)
+
+
+conjecture I ~= J -> ~((cacheVar_state(I) = e & shrSet(J) = true))
+
+
+
+conjecture I ~= J -> ~(chan2Var_cmd(I) = gnte & invSet(J) = true)
+
+
+
+conjecture ~(shrSet(I) = false & chan2Var_cmd(I) = gnte)
+
+
+conjecture ~(~(cacheVar_state(I) = i) & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(chan2Var_cmd(I) = gnts & shrSet(I) = false)
+
+
+conjecture ~(chan2Var_cmd(I) = inv & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(exGntd = true & chan2Var_cmd(I) = gnts)
+
+
+conjecture ~(invSet(I) = true & shrSet(I) = false)
+
+
+conjecture ~(invSet(I) = true & chan2Var_cmd(I) = inv)
+
+
+conjecture ~((((exGntd = true & ~(cacheVar_state(I) = e)) & chan2Var_cmd(I) = empty) & shrSet(I) = true) & curCmd = empty)
+
+
+conjecture  I ~= J -> ~(cacheVar_state(J)  = e & invSet(I) = true)
+
+
+
+conjecture  I ~= J -> ~(chan2Var_cmd(I) = gnte & chan2Var_cmd(J) = inv)
+
+
+
+conjecture  I ~= J -> ~(chan2Var_cmd(I) = gnte & chan2Var_cmd(J) = gnte)
+
+
+
+conjecture ~(~(cacheVar_state(I) = i) & shrSet(I) = false)
+
+
+conjecture I ~= J -> ~(chan2Var_cmd(J) = gnts & chan2Var_cmd(I) = gnte)
+
+
+
+conjecture ~(chan2Var_cmd(I) = inv & shrSet(I) = false)
+
+
+conjecture ~(((exGntd = true & ~(cacheVar_state(I) = e)) & chan2Var_cmd(I) = empty) & invSet(I) = true)
+
+
+conjecture I ~= J -> ~(cacheVar_state(J)  = e & chan2Var_cmd(I) = inv)
+
+
+
+conjecture I ~= J -> ~(chan2Var_cmd(J) = gnte & chan3Var_cmd(I) = invack)
+
+
+
+conjecture ~(chan2Var_cmd(I) = gnte & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(chan2Var_cmd(I) = gnte & cacheVar_state(I) = e)
+
+
+conjecture ~(chan2Var_cmd(I) = gnts & cacheVar_state(I) = e)
+
+
+conjecture I ~= J -> ~(cacheVar_state(J)  = e & chan2Var_cmd(I) = gnte)
+
+
+
+conjecture I ~= J -> ~(~(cacheVar_state(I) = i) & chan2Var_cmd(J) = gnte)
+
+
+
+conjecture I ~= J -> ~(cacheVar_state(J)  = e & chan2Var_cmd(I) = gnts)
+
+
+
+conjecture ~(chan3Var_cmd(I) = invack & shrSet(I) = false)
+
+
+conjecture ~((exGntd = true & ~(cacheVar_state(I) = e)) & chan2Var_cmd(I) = inv)
+
+
+conjecture ~(exGntd = false & chan2Var_cmd(I) = gnte)
+
+
+conjecture I ~= J -> ~(cacheVar_state(J)  = e & chan3Var_cmd(I) = invack)
+
+
+
+conjecture ~(cacheVar_state(I) = e & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(~(chan2Var_data(I) = auxData) & chan2Var_cmd(I) = gnte)
+
+
+conjecture ~(~(chan2Var_data(I) = auxData) & chan2Var_cmd(I) = gnts)
+
+
+conjecture I ~= J -> ~(~(cacheVar_state(J)  = i) & cacheVar_state(I) = e)
+
+
+
+conjecture ~((~(chan3Var_data(I) = auxData) & exGntd = true) & chan3Var_cmd(I) = invack)
+
+
+conjecture ~(exGntd = false & cacheVar_state(I) = e)
+
+
+conjecture ~(exGntd = false & cacheVar_state(I) = e)
+
+
+conjecture ~(~(cacheVar_state(I) = i) & ~(cacheVar_data(I) = auxData))
+
+conjecture ~(auxData ~= memData & ~exGntd)
+
+
+
+export recvgnte
+export recvgnts
+export sendgnte
+export sendgnts
+export recvinvack1
+export recvinvack2
+export sendinvack
+export sendinvack1
+export sendinv1
+export sendinv2
+export recvreqe
+export recvreqs
+export sendreqe1
+export sendreqe2
+export sendreqs
+export store
+
+
+
+

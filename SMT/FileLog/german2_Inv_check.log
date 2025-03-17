@@ -1,0 +1,578 @@
+Process Process-344:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-343:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-346:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-342:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-345:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-341:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-347:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-348:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-350:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-349:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-351:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-353:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-352:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-354:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-358:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-355:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-356:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-359:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-361:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-357:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-363:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-362:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-365:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-367:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-366:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-364:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-369:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-360:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-371:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-368:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-373:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-370:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-372:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range
+Process Process-374:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1104, in guard_work
+    inv_check_result, inv = call_BMC(init_formula, axiom_formula, all_LTL_formula, upper_bound, check_inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 953, in call_BMC
+    bmc_check_inv, negInv_formula = get_Inv_formula(upper_bound, inv, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1861, in get_str_Inv
+    self.inv_init_smt = self.join_statements(all_deal_inv)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 108, in join_statements
+    return murphi.OpExpr('&',statement[-1],self.join_statements(statement[:-1]))
+IndexError: list index out of range

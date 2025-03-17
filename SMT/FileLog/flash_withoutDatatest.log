@@ -1,0 +1,1075 @@
+Protocol german_withoutData has a reachability diameter of 19
+ori_formulas:  ['Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & Chan3[2].Cmd = Empty & ExGntd = true & Chan2[2].Cmd = Empty & Cache[2].State = I', 'Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & ExGntd = true & Cache[2].State = S', 'Chan3[1].Cmd = InvAck & Cache[1].State = E & Chan3[2].Cmd = InvAck & Cache[2].State = E', 'Chan3[1].Cmd = InvAck & Cache[1].State = E & ShrSet[2] = true & Chan3[2].Cmd = Empty & Chan2[2].Cmd = Empty & Cache[2].State = I', 'ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & ShrSet[2] = true & Chan3[2].Cmd = Empty & Chan2[2].Cmd = Empty & Cache[2].State = I', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = E', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = S', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = S & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = S', '& Cache[1].State = S & ExGntd = true & Cache[2].State = S', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E']
+delete_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Chan3[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Chan2[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[1].State = i)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Chan2[2].Cmd = empty & Chan3[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ExGntd = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ExGntd = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ExGntd = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan2[2].Cmd = empty & Cache[2].State = i & ExGntd = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Cache[2].State = i & ExGntd = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & ExGntd = TRUE)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = I']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Chan3[2].Cmd = empty & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & ExGntd = TRUE & Cache[2].State = i)
+smv_result:  False
+formula_dict:  {7: ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'ExGntd = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']}
+delete_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Cache[2].State = S']
+temp_formula:  ['Cache[1].State = I', 'ExGntd = true', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = i & ExGntd = TRUE & Cache[2].State = s & Chan3[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ExGntd = true', 'Cache[2].State = S']
+smv_formula:  !(ExGntd = TRUE & Cache[2].State = s & Chan3[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[2].State = S']
+smv_formula:  !(Cache[2].State = s & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ExGntd = true']
+smv_formula:  !(ExGntd = TRUE & Chan3[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true', 'Cache[2].State = S']
+temp_formula:  ['Cache[1].State = I', 'ExGntd = true', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = i & ExGntd = TRUE & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ExGntd = true', 'Cache[2].State = S']
+smv_formula:  !(ExGntd = TRUE & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[2].State = S']
+smv_formula:  !(Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ExGntd = true']
+smv_formula:  !(ExGntd = TRUE & Chan2[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'ExGntd = true', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & ExGntd = TRUE & Cache[2].State = s & Cache[1].State = i)
+smv_result:  True
+temp_formula:  ['ExGntd = true', 'Cache[2].State = S']
+smv_formula:  !(ExGntd = TRUE & Cache[2].State = s & Cache[1].State = i)
+smv_result:  True
+temp_formula:  ['Cache[2].State = S']
+smv_formula:  !(Cache[2].State = s & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['ExGntd = true']
+smv_formula:  !(ExGntd = TRUE & Cache[1].State = i)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Cache[2].State = s & ExGntd = TRUE)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = i & Cache[2].State = s & ExGntd = TRUE)
+smv_result:  True
+temp_formula:  ['Cache[2].State = S']
+smv_formula:  !(Cache[2].State = s & ExGntd = TRUE)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(ExGntd = TRUE)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ExGntd = true']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ExGntd = TRUE & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'ExGntd = true']
+smv_formula:  !(Cache[1].State = i & ExGntd = TRUE & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['ExGntd = true']
+smv_formula:  !(ExGntd = TRUE & Cache[2].State = s)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Cache[2].State = s)
+smv_result:  False
+formula_dict:  {3: ['ExGntd = true', 'Cache[2].State = S', 'Cache[1].State = I'], 2: ['ExGntd = true', 'Cache[2].State = S']}
+delete_formula:  ['Cache[1].State = E', 'Chan3[2].Cmd = InvAck', 'Cache[2].State = E']
+temp_formula:  ['Chan3[2].Cmd = InvAck', 'Cache[2].State = E']
+smv_formula:  !(Chan3[2].Cmd = invack & Cache[2].State = e & Chan3[1].Cmd = invack)
+smv_result:  True
+temp_formula:  ['Cache[2].State = E']
+smv_formula:  !(Cache[2].State = e & Chan3[1].Cmd = invack)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Chan3[1].Cmd = invack)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'Chan3[2].Cmd = InvAck', 'Cache[2].State = E']
+temp_formula:  ['Chan3[2].Cmd = InvAck', 'Cache[2].State = E']
+smv_formula:  !(Chan3[2].Cmd = invack & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Cache[2].State = E']
+smv_formula:  !(Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Cache[1].State = e)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'Cache[1].State = E', 'Cache[2].State = E']
+temp_formula:  ['Cache[1].State = E', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & Cache[2].State = e & Chan3[2].Cmd = invack)
+smv_result:  True
+temp_formula:  ['Cache[2].State = E']
+smv_formula:  !(Cache[2].State = e & Chan3[2].Cmd = invack)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Chan3[2].Cmd = invack)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'Cache[1].State = E', 'Chan3[2].Cmd = InvAck']
+temp_formula:  ['Cache[1].State = E', 'Chan3[2].Cmd = InvAck']
+smv_formula:  !(Cache[1].State = e & Chan3[2].Cmd = invack & Cache[2].State = e)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = InvAck']
+smv_formula:  !(Chan3[2].Cmd = invack & Cache[2].State = e)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Cache[2].State = e)
+smv_result:  False
+formula_dict:  {2: ['Chan3[2].Cmd = InvAck', 'Cache[2].State = E']}
+delete_formula:  ['Cache[1].State = E', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = invack)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = invack)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = invack)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = invack)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Chan3[1].Cmd = invack)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = e)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Cache[2].State = i & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true']
+smv_formula:  !(ShrSet[2] = TRUE & Cache[1].State = e)
+smv_result:  True
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'Cache[1].State = E', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Cache[1].State = E', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = e & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & ShrSet[2] = TRUE)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'Cache[1].State = E', 'ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Cache[1].State = E', 'ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = e & ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Chan3[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'Cache[1].State = E', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Cache[1].State = E', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = e & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['Chan3[1].Cmd = InvAck', 'Cache[1].State = E', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+temp_formula:  ['Cache[1].State = E', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Cache[1].State = e & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+formula_dict:  {5: ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I', 'Chan3[1].Cmd = InvAck'], 2: ['ShrSet[2] = true', 'Cache[1].State = E'], 4: ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']}
+delete_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[1] = TRUE)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[1] = TRUE)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[1] = TRUE)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[1] = TRUE)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[1] = TRUE)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & ShrSet[1] = TRUE)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & ShrSet[1] = TRUE)
+smv_result:  False
+delete_formula:  ['ShrSet[1] = true', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan3[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Chan3[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['ShrSet[1] = true', 'Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Chan2[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['ShrSet[1] = true', 'Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  True
+temp_formula:  ['Chan2[1].Cmd = Empty', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Cache[1].State = i)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[1].State = i)
+smv_result:  False
+delete_formula:  ['ShrSet[1] = true', 'Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  True
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Cache[2].State = i & ShrSet[2] = TRUE)
+smv_result:  False
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & ShrSet[2] = TRUE)
+smv_result:  False
+delete_formula:  ['ShrSet[1] = true', 'Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Cache[2].State = i & Chan3[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Chan3[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['ShrSet[1] = true', 'Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Cache[2].State = I']
+smv_formula:  !(Chan3[2].Cmd = empty & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Cache[2].State = I']
+smv_formula:  !(ShrSet[2] = TRUE & Cache[2].State = i & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['ShrSet[1] = true', 'Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+temp_formula:  ['Chan3[1].Cmd = Empty', 'Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  True
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  True
+temp_formula:  ['Cache[1].State = I', 'ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  True
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  True
+temp_formula:  ['Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan2[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+temp_formula:  ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty']
+smv_formula:  !(ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Cache[2].State = i)
+smv_result:  False
+formula_dict:  {5: ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I', 'Cache[1].State = I'], 4: ['ShrSet[2] = true', 'Chan3[2].Cmd = Empty', 'Chan2[2].Cmd = Empty', 'Cache[2].State = I']}
+delete_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & InvSet[1] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Chan2[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Cache[2].State = E']
+smv_formula:  !(Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Cache[1].State = e)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & InvSet[2] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = E']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Chan2[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqe)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = e & CurCmd = reqe)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = e)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e)
+smv_result:  False
+formula_dict:  {5: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E', 'Chan2[1].Cmd = Empty'], 2: ['Cache[2].State = E', 'Cache[1].State = E'], 4: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = E']}
+delete_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & InvSet[1] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Chan2[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = s & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Cache[2].State = S']
+smv_formula:  !(Cache[2].State = s & Cache[1].State = e)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Cache[1].State = e)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = e & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & InvSet[2] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Chan2[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = s & CurCmd = reqe)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s)
+smv_result:  False
+formula_dict:  {5: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S', 'Chan2[1].Cmd = Empty'], 2: ['Cache[2].State = S', 'Cache[1].State = E'], 4: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']}
+delete_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & InvSet[1] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Chan2[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Cache[1].State = s)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Cache[1].State = s)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & Cache[1].State = s)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Cache[1].State = s)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & Cache[1].State = s)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[1].State = s)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = s & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Cache[1].State = S', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = s & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = s & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & InvSet[2] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = s & InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = S', 'InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = s & InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqE', 'Cache[2].State = S']
+smv_formula:  !(CurCmd = reqe & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = s & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Chan2[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = S']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = s & CurCmd = reqe)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = S']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = s & CurCmd = reqe)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['Cache[1].State = S', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqE']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqE']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqe & Cache[2].State = s)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = s)
+smv_result:  False
+formula_dict:  {5: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S', 'Cache[1].State = S'], 4: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqE', 'Cache[2].State = S']}
+delete_formula:  ['ExGntd = true', 'Cache[2].State = S']
+temp_formula:  ['Cache[2].State = S']
+smv_formula:  !(Cache[2].State = s & Cache[1].State = s)
+smv_result:  False
+temp_formula:  ['ExGntd = true']
+smv_formula:  !(ExGntd = TRUE & Cache[1].State = s)
+smv_result:  True
+delete_formula:  ['& Cache[1].State = S', 'Cache[2].State = S']
+temp_formula:  ['Cache[2].State = S']
+smv_formula:  !(Cache[2].State = s & ExGntd = TRUE)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(ExGntd = TRUE)
+smv_result:  False
+delete_formula:  ['& Cache[1].State = S', 'ExGntd = true']
+temp_formula:  ['ExGntd = true']
+smv_formula:  !(ExGntd = TRUE & Cache[2].State = s)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Cache[2].State = s)
+smv_result:  False
+formula_dict:  {2: ['ExGntd = true', 'Cache[2].State = S']}
+delete_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & InvSet[1] = FALSE)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & InvSet[1] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & Chan2[1].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Chan2[1].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(CurCmd = reqs & Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  ['Cache[2].State = E']
+smv_formula:  !(Cache[2].State = e & Cache[1].State = e)
+smv_result:  True
+temp_formula:  []
+smv_formula:  !(Cache[1].State = e)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(CurCmd = reqs & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = e & InvSet[2] = FALSE)
+smv_result:  False
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqs & InvSet[2] = FALSE)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqS', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  True
+temp_formula:  ['CurCmd = ReqS', 'Cache[2].State = E']
+smv_formula:  !(CurCmd = reqs & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = e & Chan2[2].Cmd = empty)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqS']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqs & Chan2[2].Cmd = empty)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqs)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqs)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqs)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'Cache[2].State = E']
+smv_formula:  !(Chan2[2].Cmd = empty & Cache[2].State = e & CurCmd = reqs)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Cache[2].State = E']
+smv_formula:  !(InvSet[2] = FALSE & Cache[2].State = e & CurCmd = reqs)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs)
+smv_result:  False
+delete_formula:  ['InvSet[1] = false', 'Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+temp_formula:  ['Chan2[1].Cmd = Empty', 'Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+smv_formula:  !(Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e)
+smv_result:  True
+temp_formula:  ['Cache[1].State = E', 'InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+smv_formula:  !(Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e)
+smv_result:  True
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e)
+smv_result:  True
+temp_formula:  ['Chan2[2].Cmd = Empty', 'CurCmd = ReqS']
+smv_formula:  !(Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'CurCmd = ReqS']
+smv_formula:  !(InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = e)
+smv_result:  False
+temp_formula:  ['InvSet[2] = false', 'Chan2[2].Cmd = Empty']
+smv_formula:  !(InvSet[2] = FALSE & Chan2[2].Cmd = empty & Cache[2].State = e)
+smv_result:  False
+formula_dict:  {5: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E', 'Chan2[1].Cmd = Empty'], 2: ['Cache[2].State = E', 'Cache[1].State = E'], 4: ['InvSet[2] = false', 'Chan2[2].Cmd = Empty', 'CurCmd = ReqS', 'Cache[2].State = E']}

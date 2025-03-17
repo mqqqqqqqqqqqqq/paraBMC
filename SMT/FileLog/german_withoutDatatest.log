@@ -1,0 +1,26 @@
+Protocol german_withoutData has a reachability diameter of 19
+ori_formulas:  ['InvSet[1] = true & Cache[1].State = E & InvSet[2] = true & CurCmd = Empty & Cache[2].State = E', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = E', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = S', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqS & Cache[2].State = E', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = E & InvSet[2] = false & CurCmd = ReqS & Cache[2].State = S', 'InvSet[1] = false & Cache[1].State = S & InvSet[2] = false & CurCmd = ReqS & Cache[2].State = S', 'Chan3[1].Cmd = InvAck & Cache[1].State = E & Chan3[2].Cmd = InvAck & Cache[2].State = E', 'Chan3[1].Cmd = InvAck & Cache[1].State = E & ShrSet[2] = true & Chan3[2].Cmd = Empty & Chan2[2].Cmd = Empty & Cache[2].State = I', 'ShrSet[1] = true & Chan3[1].Cmd = Empty & Chan2[1].Cmd = Empty & Cache[1].State = I & ShrSet[2] = true & Chan3[2].Cmd = Empty & Chan2[2].Cmd = Empty & Cache[2].State = I', 'InvSet[1] = false & Chan2[1].Cmd = Empty & Cache[1].State = S & InvSet[2] = false & Chan2[2].Cmd = Empty & CurCmd = ReqE & Cache[2].State = S', '& Cache[1].State = E & ExGntd = false & Cache[2].State = E']
+!(InvSet[1] = TRUE & Cache[1].State = e & InvSet[2] = TRUE & CurCmd = empty & Cache[2].State = e)
+True
+!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e)
+True
+!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+True
+!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e)
+True
+!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = s)
+True
+!(InvSet[1] = FALSE & Cache[1].State = s & InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = s)
+True
+!(Chan3[1].Cmd = invack & Cache[1].State = e & Chan3[2].Cmd = invack & Cache[2].State = e)
+True
+!(Chan3[1].Cmd = invack & Cache[1].State = e & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+True
+!(ShrSet[1] = TRUE & Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)
+True
+!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)
+True
+!(Cache[1].State = e & ExGntd = FALSE & Cache[2].State = e)
+True
+all_formula:  ['!(InvSet[1] = TRUE & Cache[1].State = e & InvSet[2] = TRUE & CurCmd = empty & Cache[2].State = e)', '!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = e)', '!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)', '!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqs & Cache[2].State = e)', '!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = e & InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = s)', '!(InvSet[1] = FALSE & Cache[1].State = s & InvSet[2] = FALSE & CurCmd = reqs & Cache[2].State = s)', '!(Chan3[1].Cmd = invack & Cache[1].State = e & Chan3[2].Cmd = invack & Cache[2].State = e)', '!(Chan3[1].Cmd = invack & Cache[1].State = e & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)', '!(ShrSet[1] = TRUE & Chan3[1].Cmd = empty & Chan2[1].Cmd = empty & Cache[1].State = i & ShrSet[2] = TRUE & Chan3[2].Cmd = empty & Chan2[2].Cmd = empty & Cache[2].State = i)', '!(InvSet[1] = FALSE & Chan2[1].Cmd = empty & Cache[1].State = s & InvSet[2] = FALSE & Chan2[2].Cmd = empty & CurCmd = reqe & Cache[2].State = s)', '!(Cache[1].State = e & ExGntd = FALSE & Cache[2].State = e)']
+counts:  11

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "BMC.py", line 753, in <module>
+    inv_check_result, inv = call_BMC(upper_bound, inv, mfile_path, node_permutations = node_permutations, node_list = node_list)
+  File "BMC.py", line 585, in call_BMC
+    c = constructSMT.GetSMTformula(protocol_name, parse_name=inv_path, node_permutations=node_permutations, node_list=node_list, dl_inv=str(inv))
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 40, in __init__
+      File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/murphiparser.py", line 218, in parse_file
+    smv = str(smv_parser.parse(f.read()))
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/murphi.py", line 2314, in __str__
+    process, rules = SMVObj.new_rule_act()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/murphi.py", line 544, in new_rule_act
+    rule_var_map[str(ins_var)] = list(range(1, 1 + const_map[self.typ_map[str(typ)].const_name]))
+AttributeError: 'RngType' object has no attribute 'const_name'

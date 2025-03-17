@@ -1,0 +1,389 @@
+the time of bmc formula is 282.040852 s
+bmc_check_time 119.570300
+The Inv in flash_data_cub_1 is:  !(Sta.Proc[1].CacheState = CACHE_E & Sta.Proc[2].CacheState = CACHE_E);
+The result of checking Inv in BMC:  True
+the time of bmc check is 122.955839 s
+
+
+bmc_check_time 145.302664
+The Inv in flash_data_cub_2 is:  !(Sta.Proc[1].CacheState = CACHE_E & Sta.HomeProc.CacheState = CACHE_E);
+The result of checking Inv in BMC:  True
+the time of bmc check is 148.160958 s
+
+
+The Inv in flash_data_cub_3 is:  !(Sta.Dir.Dirty = true & Sta.MemData = Sta.CurrData);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.544296 s
+
+
+found cex in bound  1
+bmc_check_time 0.079145
+The Inv in flash_data_cub_4 is:  !(Sta.Proc[1].CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.503353 s
+
+
+The Inv in flash_data_cub_5 is:  !(Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.554063 s
+
+
+found cex in bound  2
+bmc_check_time 0.060217
+The Inv in flash_data_cub_6 is:  !(Sta.Proc[1].ProcCmd = NODE_GetX & Sta.UniMsg[1].Cmd = UNI_PutX);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.446431 s
+
+
+The Inv in flash_data_cub_7 is:  !(Sta.Proc[2].CacheState = CACHE_E & Sta.UniMsg[1].Cmd = UNI_PutX);
+The result of checking Inv in BMC:  True
+the time of bmc check is 170.154883 s
+
+
+The Inv in flash_data_cub_8 is:  !(Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.462852 s
+
+
+The Inv in flash_data_cub_9 is:  !(Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.382561 s
+
+
+The Inv in flash_data_cub_10 is:  !(Sta.Dir.Pending = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.454462 s
+
+
+found cex in bound  0
+bmc_check_time 0.016655
+The Inv in flash_data_cub_11 is:  !(Sta.Dir.Dirty = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.441368 s
+
+
+The Inv in flash_data_cub_12 is:  !(Sta.Dir.HeadVld = true);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.409628 s
+
+
+The Inv in flash_data_cub_13 is:  !(Sta.Dir.ShrSet[1] = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.414227 s
+
+
+The Inv in flash_data_cub_14 is:  !(Sta.Dir.HeadPtr = 1);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.513013 s
+
+
+The Inv in flash_data_cub_15 is:  !(Sta.Dir.HomeHeadPtr = true);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.469845 s
+
+
+found cex in bound  0
+bmc_check_time 0.036040
+The Inv in flash_data_cub_16 is:  !(Sta.Dir.ShrSet[2] = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.439498 s
+
+
+The Inv in flash_data_cub_17 is:  !(Sta.Dir.ShrSet[1] = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.452539 s
+
+
+found cex in bound  0
+bmc_check_time 0.028291
+The Inv in flash_data_cub_18 is:  !(Sta.Dir.ShrSet[2] = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.438660 s
+
+
+found cex in bound  1
+bmc_check_time 0.031727
+The Inv in flash_data_cub_19 is:  !(Sta.Proc[1].CacheState = CACHE_E);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.557190 s
+
+
+found cex in bound  0
+bmc_check_time 0.031354
+The Inv in flash_data_cub_20 is:  !(Sta.Proc[2].CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.512801 s
+
+
+The Inv in flash_data_cub_21 is:  !(Sta.UniMsg[2].Cmd = UNI_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.439853 s
+
+
+found cex in bound  0
+bmc_check_time 0.010607
+The Inv in flash_data_cub_22 is:  !(Sta.UniMsg[1].Cmd = UNI_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 17.595663 s
+
+
+The Inv in flash_data_cub_23 is:  !(Sta.Proc[2].CacheState = CACHE_I & Sta.UniMsg[1].HomeProc = true);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.303144 s
+
+
+The Inv in flash_data_cub_24 is:  !(Sta.UniMsg[2].Cmd = UNI_None & Sta.Dir.Pending = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.503412 s
+
+
+The Inv in flash_data_cub_25 is:  !(Sta.Proc[2].CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.452523 s
+
+
+found cex in bound  0
+bmc_check_time 0.016286
+The Inv in flash_data_cub_26 is:  !(Sta.Proc[2].CacheState = CACHE_E & Sta.Dir.Dirty = true);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.592208 s
+
+
+The Inv in flash_data_cub_27 is:  !(Sta.HomeProc.CacheState = CACHE_I & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.470087 s
+
+
+found cex in bound  0
+bmc_check_time 0.016656
+The Inv in flash_data_cub_28 is:  !(Sta.Dir.Pending = false & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.417595 s
+
+
+The Inv in flash_data_cub_29 is:  !(Sta.Dir.Dirty = false & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.407086 s
+
+
+found cex in bound  2
+bmc_check_time 0.072231
+The Inv in flash_data_cub_30 is:  !(Sta.Dir.HeadVld = true & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.449195 s
+
+
+The Inv in flash_data_cub_31 is:  !(Sta.Dir.ShrSet[1] = false & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.468626 s
+
+
+The Inv in flash_data_cub_32 is:  !(Sta.Dir.HeadPtr = 1 & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.526050 s
+
+
+The Inv in flash_data_cub_33 is:  !(Sta.Dir.HomeHeadPtr = true & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.482647 s
+
+
+The Inv in flash_data_cub_34 is:  !(Sta.Dir.ShrSet[2] = false & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.413193 s
+
+
+The Inv in flash_data_cub_35 is:  !(Sta.HomeUniMsg.Cmd = UNI_None & Sta.Dir.Dirty = true);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.524477 s
+
+
+The Inv in flash_data_cub_36 is:  !(Sta.HomeProc.CacheState = CACHE_I & Sta.UniMsg[1].Cmd = UNI_GetX);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.487388 s
+
+
+The Inv in flash_data_cub_37 is:  !(Sta.Proc[1].CacheState = CACHE_E & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.485286 s
+
+
+found cex in bound  0
+bmc_check_time 0.055485
+The Inv in flash_data_cub_38 is:  !(Sta.Proc[2].CacheState = CACHE_I & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.454344 s
+
+
+The Inv in flash_data_cub_39 is:  !(Sta.UniMsg[2].Cmd = UNI_None & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.452712 s
+
+
+found cex in bound  2
+bmc_check_time 0.094925
+The Inv in flash_data_cub_40 is:  !(Sta.UniMsg[1].HomeProc = false & Sta.UniMsg[1].Proc = 2);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.449790 s
+
+
+The Inv in flash_data_cub_41 is:  !(Sta.HomeUniMsg.Cmd = UNI_None & Sta.UniMsg[1].HomeProc = false);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.633630 s
+
+
+found cex in bound  0
+bmc_check_time 0.018077
+The Inv in flash_data_cub_42 is:  !(Sta.UniMsg[1].Cmd = UNI_None & Sta.HomeProc.ProcCmd = NODE_None);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.442243 s
+
+
+The Inv in flash_data_cub_43 is:  !(Sta.UniMsg[1].Cmd = UNI_PutX & Sta.UniMsg[2].Cmd = UNI_PutX);
+The result of checking Inv in BMC:  True
+the time of bmc check is 224.675101 s
+
+
+The Inv in flash_data_cub_44 is:  !(Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.422674 s
+
+
+found cex in bound  0
+bmc_check_time 0.017135
+The Inv in flash_data_cub_45 is:  !(Sta.Dir.Pending = false & Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.363681 s
+
+
+The Inv in flash_data_cub_46 is:  !(Sta.Dir.Dirty = false & Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.470984 s
+
+
+The Inv in flash_data_cub_47 is:  !(Sta.Dir.HeadVld = true & Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.437216 s
+
+
+The Inv in flash_data_cub_48 is:  !(Sta.Dir.ShrSet[1] = false & Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.401904 s
+
+
+The Inv in flash_data_cub_49 is:  !(Sta.Dir.HeadPtr = 1 & Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.388418 s
+
+
+found cex in bound  1
+bmc_check_time 0.051661
+The Inv in flash_data_cub_50 is:  !(Sta.Dir.HomeHeadPtr = true & Sta.HomeProc.CacheState = CACHE_I);
+The result of checking Inv in BMC:  False
+the time of bmc check is 2.586172 s
+
+
+The Inv in flash_data_cub_51 is:  !(Sta.Proc[1].CacheState = CACHE_E & Sta.UniMsg[2].Cmd = UNI_PutX);
+The result of checking Inv in BMC:  True
+the time of bmc check is 151.693717 s
+
+
+The Inv in flash_data_cub_52 is:  !(Sta.Proc[2].CacheState = CACHE_E & Sta.Dir.Dirty = false);
+The result of checking Inv in BMC:  True
+the time of bmc check is 140.517430 s
+
+
+bmc_check_time 107.634650
+The Inv in flash_data_cub_53 is:  !(Sta.Proc[2].CacheState = CACHE_E & Sta.Dir.Local = true);
+The result of checking Inv in BMC:  True
+the time of bmc check is 110.692944 s
+
+
+bmc_check_time 115.213491
+The Inv in flash_data_cub_54 is:  !(Sta.HomeProc.CacheState = CACHE_E & Sta.Dir.Dirty = false);
+The result of checking Inv in BMC:  True
+the time of bmc check is 118.580228 s
+
+
+The Inv in flash_data_cub_55 is:  !(Sta.HomeProc.CacheState = CACHE_E & Sta.Proc[2].CacheState = CACHE_E);
+The result of checking Inv in BMC:  True
+the time of bmc check is 118.485126 s
+
+
+The Inv in flash_data_cub_56 is:  !(Sta.UniMsg[2].Cmd = UNI_PutX & Sta.Dir.Dirty = false);
+The result of checking Inv in BMC:  True
+the time of bmc check is 167.621170 s
+
+
+bmc_check_time 117.597800
+The Inv in flash_data_cub_57 is:  !(Sta.UniMsg[2].Cmd = UNI_PutX & Sta.Dir.Local = true);
+The result of checking Inv in BMC:  True
+the time of bmc check is 121.184981 s
+
+
+bmc_check_time 3.608007
+The Inv in flash_data_cub_58 is:  !(Sta.UniMsg[2].Cmd = UNI_PutX & Sta.Proc[2].CacheState = CACHE_E);
+The result of checking Inv in BMC:  True
+the time of bmc check is 6.886606 s
+
+
+bmc_check_time 84.444574
+The Inv in flash_data_cub_59 is:  !(Sta.HomeUniMsg.Cmd = UNI_Put & Sta.UniMsg[1].Cmd = UNI_PutX);
+The result of checking Inv in BMC:  True
+the time of bmc check is 87.658093 s
+
+
+bmc_check_time 123.187691
+The Inv in flash_data_cub_60 is:  !(Sta.UniMsg[1].Cmd = UNI_PutX & Sta.WbMsg.Cmd = WB_Wb);
+The result of checking Inv in BMC:  True
+the time of bmc check is 126.187643 s
+
+
+The Inv in flash_data_cub_61 is:  !(Sta.ShWbMsg.HomeProc = true & Sta.ShWbMsg.Cmd = SHWB_ShWb);
+The result of checking Inv in BMC:  True
+the time of bmc check is 5.294123 s
+
+
+The Inv in flash_data_cub_62 is:  !(Sta.Dir.HomeShrSet = true);
+The result of checking Inv in BMC:  True
+the time of bmc check is 7.333669 s
+
+
+bmc_check_time 28.786281
+The Inv in flash_data_cub_63 is:  !(Sta.UniMsg[1].Cmd = UNI_PutX & Sta.ShWbMsg.Cmd = SHWB_ShWb);
+The result of checking Inv in BMC:  True
+the time of bmc check is 31.829318 s
+
+
+The Inv in flash_data_cub_64 is:  !(Sta.ShWbMsg.Cmd = SHWB_ShWb & Sta.Dir.Pending = false);
+The result of checking Inv in BMC:  True
+the time of bmc check is 48.464250 s
+
+
+The Inv in flash_data_cub_65 is:  !(Sta.Dir.ShrSet[1] = true & Sta.Proc[2].CacheState = CACHE_E);
+The result of checking Inv in BMC:  True
+the time of bmc check is 83.867795 s
+
+
+The Inv in flash_data_cub_66 is:  !(Sta.Dir.ShrSet[1] = true & Sta.Proc[1].CacheState = CACHE_E);
+The result of checking Inv in BMC:  True
+the time of bmc check is 30.823464 s
+
+
+bmc_check_time 27.222021
+The Inv in flash_data_cub_67 is:  !(Sta.HomeUniMsg.Cmd = UNI_PutX & Sta.Dir.Pending = false);
+The result of checking Inv in BMC:  True
+the time of bmc check is 30.424472 s
+
+
+The Inv in flash_data_cub_68 is:  !(Sta.HomeProc.InvMarked = true);
+The result of checking Inv in BMC:  True
+the time of bmc check is 15.410468 s
+
+
+The Inv in flash_data_cub_69 is:  !(Sta.HomeUniMsg.Cmd = UNI_PutX & Sta.Proc[2].CacheState = CACHE_E);
+The result of checking Inv in BMC:  True
+the time of bmc check is 54.177644 s
+
+
+shell runtime: 2537.235318 s

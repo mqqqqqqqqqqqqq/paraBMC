@@ -1,0 +1,104 @@
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[2] = true & has_lock[1] = true)}
+found cex in bound  1
+The Inv in decen_1 is:  !(has_lock[2] = true & has_lock[1] = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[2] = false & has_lock[1] = false)}
+found cex in bound  0
+The Inv in decen_2 is:  !(has_lock[2] = false & has_lock[1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = true & has_lock[1] = true)}
+found cex in bound  0
+The Inv in decen_3 is:  !(has_lock[1] = true & has_lock[1] = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = false & has_lock[1] = false)}
+found cex in bound  0
+The Inv in decen_4 is:  !(has_lock[1] = false & has_lock[1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = false & has_lock[1] = true)}
+The Inv in decen_5 is:  !(has_lock[1] = false & has_lock[1] = true)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[2] = true & has_lock[1] = false)}
+found cex in bound  0
+The Inv in decen_6 is:  !(has_lock[2] = true & has_lock[1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = false & has_lock[2] = true)}
+found cex in bound  0
+The Inv in decen_7 is:  !(has_lock[1] = false & has_lock[2] = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[2] = false & has_lock[1] = true)}
+found cex in bound  0
+The Inv in decen_8 is:  !(has_lock[2] = false & has_lock[1] = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(message[2][2] = true & message[1][1] = true)}
+found cex in bound  0
+The Inv in decen_9 is:  !(message[2][2] = true & message[1][1] = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = true & message[2][1] = true)}
+found cex in bound  0
+The Inv in decen_10 is:  !(has_lock[1] = true & message[2][1] = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = false & message[2][1] = true)}
+found cex in bound  0
+The Inv in decen_11 is:  !(has_lock[1] = false & message[2][1] = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = false & message[2][1] = false)}
+found cex in bound  0
+The Inv in decen_12 is:  !(has_lock[1] = false & message[2][1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+g_tmp:  {'decentralized_lock': NegExpr(has_lock[1] = true & message[2][1] = false)}
+found cex in bound  0
+The Inv in decen_13 is:  !(has_lock[1] = true & message[2][1] = false)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  
+Consistency of results is : NO
+
+
+shell runtime: 50.753271 s

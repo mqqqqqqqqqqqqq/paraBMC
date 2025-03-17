@@ -1,0 +1,16 @@
+  !(Chan3[1].Cmd = Empty & ExGntd = true & Chan2[1].Cmd = Empty & Cache[1].State = I)
+  !(Chan3[1].Cmd = Empty & ExGntd = true & Chan2[1].Cmd = Empty & Cache[1].State = I)
+  !(Chan3[1].Cmd = Empty & ExGntd = true & Chan2[1].Cmd = Empty & Cache[1].State = I)
+  !(Chan3[1].Cmd = Empty & ExGntd = true & Chan2[1].Cmd = Empty & Cache[1].State = I)
+  !(ExGntd = true & ShrSet[1] = false)
+  !(ExGntd = true & ShrSet[1] = false)
+  !(ExGntd = true & ShrSet[1] = false)
+counts: 7
+Delete duplicate inv: 
+  !(Chan3[1].Cmd = Empty & ExGntd = true & Chan2[1].Cmd = Empty & Cache[1].State = I)
+  !(ExGntd = true & ShrSet[1] = false)  这一个gene的另一个结果是，前面是取了属性最少的    !(Chan3[1].Cmd = Empty & ExGntd = true & Chan2[1].Cmd = Empty & Cache[1].State = I)
+counts: 2
+
+
+
+

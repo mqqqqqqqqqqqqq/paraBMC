@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "murphi_and_bmc.py", line 149, in <module>
+    guard_result, new_init_formula = BMC.call_BMC_guard(init_fomula, axiom_formula, all_LTL_formula, upper_bound, neg_guard, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 1006, in call_BMC_guard
+    bmc_check_negGuard, negGuard_formula = get_Inv_formula(upper_bound, neg_guard, mfile_path, ScalarSetType_vars, BooleanType_vars)
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/BMC.py", line 921, in get_Inv_formula
+    c.get_str_Inv()
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1859, in get_str_Inv
+    all_deal_inv.append(self.inv_op(deal_eq_inv, self.all_init_dict))
+  File "/home/lyj238/Mqian/smt_dl/smt4Inductive_Invariants/SMT/constructSMT.py", line 1754, in inv_op
+    deal_formula = murphi.OpExpr(sub_list[2], expr1, expr2)
+UnboundLocalError: local variable 'expr1' referenced before assignment

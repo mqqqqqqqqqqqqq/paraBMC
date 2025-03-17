@@ -1,0 +1,322 @@
+{'Init': OpExpr(&, AuxData = 2 & MemData = 2 & Cache[2].Data = 2 & Cache[1].Data = 2 & Chan3[2].Data = 2 & Chan2[1].Data = 2 & Chan1[2].Data = 2 & Chan1[1].Data = 2 | AuxData = 1 & MemData = 1 & Cache[2].Data = 1 & Cache[1].Data = 1 & Chan3[2].Data = 1 & Chan2[1].Data = 1 & Chan1[2].Data = 1 & Chan1[1].Data = 1, CurCmd = Empty & ExGntd = false & ShrSet[2] = false & ShrSet[1] = false & InvSet[2] = false & InvSet[1] = false & Cache[2].State = I & Cache[1].State = I & Chan3[1].Data = 2 & Chan3[1].Data = 1 & Chan2[2].Data = 2 & Chan2[2].Data = 1 & Chan3[2].Cmd = Empty & Chan3[1].Cmd = Empty & Chan2[2].Cmd = Empty & Chan2[1].Cmd = Empty & Chan1[2].Cmd = Empty & Chan1[1].Cmd = Empty)}
+-----------------------------------------------------------------------------------
+current_rule:  RecvGntE1
+guard_formula:  [Chan2[1].Cmd@0 == GntE, Chan2[1].Cmd@1 == GntE]
+assign_formula:  [And(Chan2[1].Cmd@1 == Empty,
+    And(Cache[1].Data@1 == Chan2[1].Data@0,
+        Cache[1].State@1 == E)), And(Chan2[1].Cmd@2 == Empty,
+    And(Cache[1].Data@2 == Chan2[1].Data@1,
+        Cache[1].State@2 == E))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvGntE2
+guard_formula:  [Chan2[2].Cmd@0 == GntE, Chan2[2].Cmd@1 == GntE]
+assign_formula:  [And(Chan2[2].Cmd@1 == Empty,
+    And(Cache[2].Data@1 == Chan2[2].Data@0,
+        Cache[2].State@1 == E)), And(Chan2[2].Cmd@2 == Empty,
+    And(Cache[2].Data@2 == Chan2[2].Data@1,
+        Cache[2].State@2 == E))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvGntS1
+guard_formula:  [Chan2[1].Cmd@0 == GntS, Chan2[1].Cmd@1 == GntS]
+assign_formula:  [And(Chan2[1].Cmd@1 == Empty,
+    And(Cache[1].Data@1 == Chan2[1].Data@0,
+        Cache[1].State@1 == S)), And(Chan2[1].Cmd@2 == Empty,
+    And(Cache[1].Data@2 == Chan2[1].Data@1,
+        Cache[1].State@2 == S))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvGntS2
+guard_formula:  [Chan2[2].Cmd@0 == GntS, Chan2[2].Cmd@1 == GntS]
+assign_formula:  [And(Chan2[2].Cmd@1 == Empty,
+    And(Cache[2].Data@1 == Chan2[2].Data@0,
+        Cache[2].State@1 == S)), And(Chan2[2].Cmd@2 == Empty,
+    And(Cache[2].Data@2 == Chan2[2].Data@1,
+        Cache[2].State@2 == S))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendGntE1
+guard_formula:  [And(CurCmd@0 == ReqE,
+    And(CurPtr@0 == 1,
+        And(Chan2[1].Cmd@0 == Empty,
+            And(ExGntd@0 == False,
+                And(ShrSet[2]@0 == False,
+                    ShrSet[1]@0 == False))))), And(CurCmd@1 == ReqE,
+    And(CurPtr@1 == 1,
+        And(Chan2[1].Cmd@1 == Empty,
+            And(ExGntd@1 == False,
+                And(ShrSet[2]@1 == False,
+                    ShrSet[1]@1 == False)))))]
+assign_formula:  [And(CurCmd@1 == Empty,
+    And(ExGntd@1 == True,
+        And(ShrSet[1]@1 == True,
+            And(Chan2[1].Data@1 == MemData@0,
+                Chan2[1].Cmd@1 == GntE)))), And(CurCmd@2 == Empty,
+    And(ExGntd@2 == True,
+        And(ShrSet[1]@2 == True,
+            And(Chan2[1].Data@2 == MemData@1,
+                Chan2[1].Cmd@2 == GntE))))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendGntE2
+guard_formula:  [And(CurCmd@0 == ReqE,
+    And(CurPtr@0 == 2,
+        And(Chan2[2].Cmd@0 == Empty,
+            And(ExGntd@0 == False,
+                And(ShrSet[2]@0 == False,
+                    ShrSet[1]@0 == False))))), And(CurCmd@1 == ReqE,
+    And(CurPtr@1 == 2,
+        And(Chan2[2].Cmd@1 == Empty,
+            And(ExGntd@1 == False,
+                And(ShrSet[2]@1 == False,
+                    ShrSet[1]@1 == False)))))]
+assign_formula:  [And(CurCmd@1 == Empty,
+    And(ExGntd@1 == True,
+        And(ShrSet[2]@1 == True,
+            And(Chan2[2].Data@1 == MemData@0,
+                Chan2[2].Cmd@1 == GntE)))), And(CurCmd@2 == Empty,
+    And(ExGntd@2 == True,
+        And(ShrSet[2]@2 == True,
+            And(Chan2[2].Data@2 == MemData@1,
+                Chan2[2].Cmd@2 == GntE))))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendGntS1
+guard_formula:  [And(CurCmd@0 == ReqS,
+    And(CurPtr@0 == 1,
+        And(Chan2[1].Cmd@0 == Empty, ExGntd@0 == False))), And(CurCmd@1 == ReqS,
+    And(CurPtr@1 == 1,
+        And(Chan2[1].Cmd@1 == Empty, ExGntd@1 == False)))]
+assign_formula:  [And(CurCmd@1 == Empty,
+    And(ShrSet[1]@1 == True,
+        And(Chan2[1].Data@1 == MemData@0,
+            Chan2[1].Cmd@1 == GntS))), And(CurCmd@2 == Empty,
+    And(ShrSet[1]@2 == True,
+        And(Chan2[1].Data@2 == MemData@1,
+            Chan2[1].Cmd@2 == GntS)))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendGntS2
+guard_formula:  [And(CurCmd@0 == ReqS,
+    And(CurPtr@0 == 2,
+        And(Chan2[2].Cmd@0 == Empty, ExGntd@0 == False))), And(CurCmd@1 == ReqS,
+    And(CurPtr@1 == 2,
+        And(Chan2[2].Cmd@1 == Empty, ExGntd@1 == False)))]
+assign_formula:  [And(CurCmd@1 == Empty,
+    And(ShrSet[2]@1 == True,
+        And(Chan2[2].Data@1 == MemData@0,
+            Chan2[2].Cmd@1 == GntS))), And(CurCmd@2 == Empty,
+    And(ShrSet[2]@2 == True,
+        And(Chan2[2].Data@2 == MemData@1,
+            Chan2[2].Cmd@2 == GntS)))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvInvAck11
+guard_formula:  [And(Chan3[1].Cmd@0 == InvAck,
+    And(CurCmd@0 != Empty, ExGntd@0 == True)), And(Chan3[1].Cmd@1 == InvAck,
+    And(CurCmd@1 != Empty, ExGntd@1 == True))]
+assign_formula:  [And(MemData@1 == Chan3[1].Data@0,
+    And(ExGntd@1 == False,
+        And(ShrSet[1]@1 == False, Chan3[1].Cmd@1 == Empty))), And(MemData@2 == Chan3[1].Data@1,
+    And(ExGntd@2 == False,
+        And(ShrSet[1]@2 == False, Chan3[1].Cmd@2 == Empty)))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvInvAck12
+guard_formula:  [And(Chan3[2].Cmd@0 == InvAck,
+    And(CurCmd@0 != Empty, ExGntd@0 == True)), And(Chan3[2].Cmd@1 == InvAck,
+    And(CurCmd@1 != Empty, ExGntd@1 == True))]
+assign_formula:  [And(MemData@1 == Chan3[2].Data@0,
+    And(ExGntd@1 == False,
+        And(ShrSet[2]@1 == False, Chan3[2].Cmd@1 == Empty))), And(MemData@2 == Chan3[2].Data@1,
+    And(ExGntd@2 == False,
+        And(ShrSet[2]@2 == False, Chan3[2].Cmd@2 == Empty)))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvInvAck21
+guard_formula:  [And(Chan3[1].Cmd@0 == InvAck,
+    And(CurCmd@0 != Empty, ExGntd@0 != True)), And(Chan3[1].Cmd@1 == InvAck,
+    And(CurCmd@1 != Empty, ExGntd@1 != True))]
+assign_formula:  [And(ShrSet[1]@1 == False, Chan3[1].Cmd@1 == Empty), And(ShrSet[1]@2 == False, Chan3[1].Cmd@2 == Empty)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvInvAck22
+guard_formula:  [And(Chan3[2].Cmd@0 == InvAck,
+    And(CurCmd@0 != Empty, ExGntd@0 != True)), And(Chan3[2].Cmd@1 == InvAck,
+    And(CurCmd@1 != Empty, ExGntd@1 != True))]
+assign_formula:  [And(ShrSet[2]@1 == False, Chan3[2].Cmd@1 == Empty), And(ShrSet[2]@2 == False, Chan3[2].Cmd@2 == Empty)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInvAck11
+guard_formula:  [And(Chan2[1].Cmd@0 == Inv,
+    And(Chan3[1].Cmd@0 == Empty, Cache[1].State@0 == E)), And(Chan2[1].Cmd@1 == Inv,
+    And(Chan3[1].Cmd@1 == Empty, Cache[1].State@1 == E))]
+assign_formula:  [And(Cache[1].State@1 == I,
+    And(Chan3[1].Data@1 == Cache[1].Data@0,
+        And(Chan3[1].Cmd@1 == InvAck,
+            Chan2[1].Cmd@1 == Empty))), And(Cache[1].State@2 == I,
+    And(Chan3[1].Data@2 == Cache[1].Data@1,
+        And(Chan3[1].Cmd@2 == InvAck,
+            Chan2[1].Cmd@2 == Empty)))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInvAck12
+guard_formula:  [And(Chan2[2].Cmd@0 == Inv,
+    And(Chan3[2].Cmd@0 == Empty, Cache[2].State@0 == E)), And(Chan2[2].Cmd@1 == Inv,
+    And(Chan3[2].Cmd@1 == Empty, Cache[2].State@1 == E))]
+assign_formula:  [And(Cache[2].State@1 == I,
+    And(Chan3[2].Data@1 == Cache[2].Data@0,
+        And(Chan3[2].Cmd@1 == InvAck,
+            Chan2[2].Cmd@1 == Empty))), And(Cache[2].State@2 == I,
+    And(Chan3[2].Data@2 == Cache[2].Data@1,
+        And(Chan3[2].Cmd@2 == InvAck,
+            Chan2[2].Cmd@2 == Empty)))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInvAck21
+guard_formula:  [And(Chan2[1].Cmd@0 == Inv,
+    And(Chan3[1].Cmd@0 == Empty, Cache[1].State@0 != E)), And(Chan2[1].Cmd@1 == Inv,
+    And(Chan3[1].Cmd@1 == Empty, Cache[1].State@1 != E))]
+assign_formula:  [And(Cache[1].State@1 == I,
+    And(Chan3[1].Cmd@1 == InvAck, Chan2[1].Cmd@1 == Empty)), And(Cache[1].State@2 == I,
+    And(Chan3[1].Cmd@2 == InvAck, Chan2[1].Cmd@2 == Empty))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInvAck22
+guard_formula:  [And(Chan2[2].Cmd@0 == Inv,
+    And(Chan3[2].Cmd@0 == Empty, Cache[2].State@0 != E)), And(Chan2[2].Cmd@1 == Inv,
+    And(Chan3[2].Cmd@1 == Empty, Cache[2].State@1 != E))]
+assign_formula:  [And(Cache[2].State@1 == I,
+    And(Chan3[2].Cmd@1 == InvAck, Chan2[2].Cmd@1 == Empty)), And(Cache[2].State@2 == I,
+    And(Chan3[2].Cmd@2 == InvAck, Chan2[2].Cmd@2 == Empty))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInv11
+guard_formula:  [And(Chan2[1].Cmd@0 == Empty,
+    And(InvSet[1]@0 == True, CurCmd@0 == ReqE)), And(Chan2[1].Cmd@1 == Empty,
+    And(InvSet[1]@1 == True, CurCmd@1 == ReqE))]
+assign_formula:  [And(InvSet[1]@1 == False, Chan2[1].Cmd@1 == Inv), And(InvSet[1]@2 == False, Chan2[1].Cmd@2 == Inv)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInv12
+guard_formula:  [And(Chan2[2].Cmd@0 == Empty,
+    And(InvSet[2]@0 == True, CurCmd@0 == ReqE)), And(Chan2[2].Cmd@1 == Empty,
+    And(InvSet[2]@1 == True, CurCmd@1 == ReqE))]
+assign_formula:  [And(InvSet[2]@1 == False, Chan2[2].Cmd@1 == Inv), And(InvSet[2]@2 == False, Chan2[2].Cmd@2 == Inv)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInv21
+guard_formula:  [And(Chan2[1].Cmd@0 == Empty,
+    And(InvSet[1]@0 == True,
+        And(CurCmd@0 == ReqS, ExGntd@0 == True))), And(Chan2[1].Cmd@1 == Empty,
+    And(InvSet[1]@1 == True,
+        And(CurCmd@1 == ReqS, ExGntd@1 == True)))]
+assign_formula:  [And(InvSet[1]@1 == False, Chan2[1].Cmd@1 == Inv), And(InvSet[1]@2 == False, Chan2[1].Cmd@2 == Inv)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendInv22
+guard_formula:  [And(Chan2[2].Cmd@0 == Empty,
+    And(InvSet[2]@0 == True,
+        And(CurCmd@0 == ReqS, ExGntd@0 == True))), And(Chan2[2].Cmd@1 == Empty,
+    And(InvSet[2]@1 == True,
+        And(CurCmd@1 == ReqS, ExGntd@1 == True)))]
+assign_formula:  [And(InvSet[2]@1 == False, Chan2[2].Cmd@1 == Inv), And(InvSet[2]@2 == False, Chan2[2].Cmd@2 == Inv)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvReqE1
+guard_formula:  [And(CurCmd@0 == Empty, Chan1[1].Cmd@0 == ReqE), And(CurCmd@1 == Empty, Chan1[1].Cmd@1 == ReqE)]
+assign_formula:  [And(InvSet[2]@1 == ShrSet[2]@0,
+    And(InvSet[1]@1 == ShrSet[1]@0,
+        And(Chan1[1].Cmd@1 == Empty,
+            And(CurPtr@1 == 1, CurCmd@1 == ReqE)))), And(InvSet[2]@2 == ShrSet[2]@1,
+    And(InvSet[1]@2 == ShrSet[1]@1,
+        And(Chan1[1].Cmd@2 == Empty,
+            And(CurPtr@2 == 1, CurCmd@2 == ReqE))))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvReqE2
+guard_formula:  [And(CurCmd@0 == Empty, Chan1[2].Cmd@0 == ReqE), And(CurCmd@1 == Empty, Chan1[2].Cmd@1 == ReqE)]
+assign_formula:  [And(InvSet[2]@1 == ShrSet[2]@0,
+    And(InvSet[1]@1 == ShrSet[1]@0,
+        And(Chan1[2].Cmd@1 == Empty,
+            And(CurPtr@1 == 2, CurCmd@1 == ReqE)))), And(InvSet[2]@2 == ShrSet[2]@1,
+    And(InvSet[1]@2 == ShrSet[1]@1,
+        And(Chan1[2].Cmd@2 == Empty,
+            And(CurPtr@2 == 2, CurCmd@2 == ReqE))))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvReqS1
+guard_formula:  [And(CurCmd@0 == Empty, Chan1[1].Cmd@0 == ReqS), And(CurCmd@1 == Empty, Chan1[1].Cmd@1 == ReqS)]
+assign_formula:  [And(InvSet[2]@1 == ShrSet[2]@0,
+    And(InvSet[1]@1 == ShrSet[1]@0,
+        And(Chan1[1].Cmd@1 == Empty,
+            And(CurPtr@1 == 1, CurCmd@1 == ReqS)))), And(InvSet[2]@2 == ShrSet[2]@1,
+    And(InvSet[1]@2 == ShrSet[1]@1,
+        And(Chan1[1].Cmd@2 == Empty,
+            And(CurPtr@2 == 1, CurCmd@2 == ReqS))))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  RecvReqS2
+guard_formula:  [And(CurCmd@0 == Empty, Chan1[2].Cmd@0 == ReqS), And(CurCmd@1 == Empty, Chan1[2].Cmd@1 == ReqS)]
+assign_formula:  [And(InvSet[2]@1 == ShrSet[2]@0,
+    And(InvSet[1]@1 == ShrSet[1]@0,
+        And(Chan1[2].Cmd@1 == Empty,
+            And(CurPtr@1 == 2, CurCmd@1 == ReqS)))), And(InvSet[2]@2 == ShrSet[2]@1,
+    And(InvSet[1]@2 == ShrSet[1]@1,
+        And(Chan1[2].Cmd@2 == Empty,
+            And(CurPtr@2 == 2, CurCmd@2 == ReqS))))]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendReqE11
+guard_formula:  [And(Chan1[1].Cmd@0 == Empty, Cache[1].State@0 == I), And(Chan1[1].Cmd@1 == Empty, Cache[1].State@1 == I)]
+assign_formula:  [Chan1[1].Cmd@1 == ReqE, Chan1[1].Cmd@2 == ReqE]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendReqE12
+guard_formula:  [And(Chan1[2].Cmd@0 == Empty, Cache[2].State@0 == I), And(Chan1[2].Cmd@1 == Empty, Cache[2].State@1 == I)]
+assign_formula:  [Chan1[2].Cmd@1 == ReqE, Chan1[2].Cmd@2 == ReqE]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendReqE21
+guard_formula:  [And(Chan1[1].Cmd@0 == Empty, Cache[1].State@0 == S), And(Chan1[1].Cmd@1 == Empty, Cache[1].State@1 == S)]
+assign_formula:  [Chan1[1].Cmd@1 == ReqE, Chan1[1].Cmd@2 == ReqE]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendReqE22
+guard_formula:  [And(Chan1[2].Cmd@0 == Empty, Cache[2].State@0 == S), And(Chan1[2].Cmd@1 == Empty, Cache[2].State@1 == S)]
+assign_formula:  [Chan1[2].Cmd@1 == ReqE, Chan1[2].Cmd@2 == ReqE]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendReqS1
+guard_formula:  [And(Chan1[1].Cmd@0 == Empty, Cache[1].State@0 == I), And(Chan1[1].Cmd@1 == Empty, Cache[1].State@1 == I)]
+assign_formula:  [Chan1[1].Cmd@1 == ReqS, Chan1[1].Cmd@2 == ReqS]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  SendReqS2
+guard_formula:  [And(Chan1[2].Cmd@0 == Empty, Cache[2].State@0 == I), And(Chan1[2].Cmd@1 == Empty, Cache[2].State@1 == I)]
+assign_formula:  [Chan1[2].Cmd@1 == ReqS, Chan1[2].Cmd@2 == ReqS]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  Store1
+guard_formula:  [Cache[1].State@0 == E, Cache[1].State@1 == E]
+assign_formula:  [And(AuxData@1 == 1, Cache[1].Data@1 == 1), And(AuxData@2 == 1, Cache[1].Data@2 == 1)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  Store2
+guard_formula:  [Cache[2].State@0 == E, Cache[2].State@1 == E]
+assign_formula:  [And(AuxData@1 == 1, Cache[2].Data@1 == 1), And(AuxData@2 == 1, Cache[2].Data@2 == 1)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  Store3
+guard_formula:  [Cache[1].State@0 == E, Cache[1].State@1 == E]
+assign_formula:  [And(AuxData@1 == 2, Cache[1].Data@1 == 2), And(AuxData@2 == 2, Cache[1].Data@2 == 2)]
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+current_rule:  Store4
+guard_formula:  [Cache[2].State@0 == E, Cache[2].State@1 == E]
+assign_formula:  [And(AuxData@1 == 2, Cache[2].Data@1 == 2), And(AuxData@2 == 2, Cache[2].Data@2 == 2)]
+-----------------------------------------------------------------------------------
+inv:  !(AuxData = 1 & MemData = 1 & Cache[2].Data = 1 & Cache[1].Data = 1 & Chan2[1].Data = 1 & Cache[1].State = I & Cache[2].State = E & Chan2[1].Cmd = GntE)
+inv_check_result:  True
+Times of calling BMC spends 2.440235 s

@@ -1,0 +1,97 @@
+The Inv in mutual_1 is:  !(n[2] = C & x = true & n[1] = T)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+found cex in bound  1
+The Inv in mutual_2 is:  !(x = true & n[1] = T)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+
+
+found cex in bound  3
+The Inv in mutual_3 is:  !(n[2] = C & n[1] = T)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+
+
+The Inv in mutual_4 is:  !(n[2] = C & x = true)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+found cex in bound  0
+The Inv in mutual_5 is:  !(x = true)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+
+
+found cex in bound  2
+The Inv in mutual_6 is:  !(n[2] = C)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+
+
+The Inv in mutual_7 is:  !(n[1] = C & x = true)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+The Inv in mutual_8 is:  !(n[1] = E & n[2] = C & x = false)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+The Inv in mutual_9 is:  !(n[1] = E & n[2] = C)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+found cex in bound  3
+The Inv in mutual_10 is:  !(n[1] = E)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+
+
+The Inv in mutual_11 is:  !(n[2] = E & n[1] = C)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+The Inv in mutual_12 is:  !(n[1] = E & n[2] = T & x = true)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+found cex in bound  4
+The Inv in mutual_13 is:  !(n[1] = E & n[2] = T)
+The result of checking Inv in BMC:  False
+The result of checking Inv in murphi:  False
+
+
+The Inv in mutual_14 is:  !(n[1] = E & x = true)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+The Inv in mutual_15 is:  !(n[1] = E & x = true)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+The Inv in mutual_16 is:  !(n[2] = E & n[1] = E & x = false)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+The Inv in mutual_17 is:  !(n[2] = E & n[1] = E)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+The Inv in mutual_18 is:  !(n[2] = E & n[1] = E)
+The result of checking Inv in BMC:  True
+The result of checking Inv in murphi:  True
+
+
+shell runtime: 99.069172 s

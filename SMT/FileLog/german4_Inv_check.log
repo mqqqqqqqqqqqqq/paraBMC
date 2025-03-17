@@ -1,0 +1,127 @@
+The Inv in german_1 is:  !(Chan2[1].Cmd = GntE);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_2 is:  !(Chan2[1].Data = 2);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_3 is:  !(Cache[2].State = S);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_4 is:  !(Cache[1].State = I);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_5 is:  !(Cache[1].Data = 2);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_6 is:  !(AuxData = 2);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_7 is:  !(Cache[2].Data = 2);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_8 is:  !(ExGntd = false);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_9 is:  !(MemData = 1);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_10 is:  !(Cache[3].State = I);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_11 is:  !(Cache[3].Data = 2);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_12 is:  !(Cache[4].State = I);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_13 is:  !(Cache[4].Data = 2);
+The result of checking Inv in murphi:  False
+
+
+The Inv in german_14 is:  !(Chan2[1].Data = 2 & Chan2[1].Cmd = GntE);
+The result of checking Inv in murphi:  False
+
+
+found cex in bound  3
+The Inv in german_1 is:  !(Chan2[1].Cmd = GntE)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_2 is:  !(Chan2[1].Data = 2)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  4
+The Inv in german_3 is:  !(Cache[2].State = S)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_4 is:  !(Cache[1].State = I)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_5 is:  !(Cache[1].Data = 2)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_6 is:  !(AuxData = 2)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_7 is:  !(Cache[2].Data = 2)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_8 is:  !(ExGntd = false)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_9 is:  !(MemData = 1)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_10 is:  !(Cache[3].State = I)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_11 is:  !(Cache[3].Data = 2)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_12 is:  !(Cache[4].State = I)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  0
+The Inv in german_13 is:  !(Cache[4].Data = 2)
+The result of checking Inv in BMC:  False
+
+
+found cex in bound  3
+The Inv in german_14 is:  !(Chan2[1].Cmd = GntE & Chan2[1].Data = 2)
+The result of checking Inv in BMC:  False
+
+
+shell runtime: 155.634083 s
